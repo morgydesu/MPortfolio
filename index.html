@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morgan Schmidt | Product Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .bento-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .bento-card:hover { transform: translateY(-4px); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
+        <span class="font-bold text-xl tracking-tighter italic">M.STUDIO</span>
+        <div class="space-x-8 text-sm font-medium text-slate-500">
+            <a href="#work" class="hover:text-blue-600 transition">Work</a>
+            <a href="#about" class="hover:text-blue-600 transition">About</a>
+            <a href="mailto:your@email.com" class="bg-slate-900 text-white px-5 py-2 rounded-full hover:bg-blue-600 transition">Get in touch</a>
+        </div>
+    </nav>
+
+    <header class="max-w-6xl mx-auto px-6 pt-20 pb-32">
+        <div class="max-w-3xl">
+            <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight mb-8">
+                Building products for <span class="text-blue-600">human efficiency.</span>
+            </h1>
+            <p class="text-xl text-slate-600 leading-relaxed mb-10">
+                I'm Morgan, a Product Builder at <span class="font-semibold text-slate-900 underline decoration-blue-200">Telstra</span>. 
+                With a background in USYD Design Computing and experience at <span class="font-semibold text-slate-900">Okta</span>, 
+                I bridge the gap between complex engineering and elegant user experiences.
+            </p>
+        </div>
+    </header>
+
+    <main id="work" class="max-w-6xl mx-auto px-6 pb-32">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-12">Selected Projects</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            
+            <div class="md:col-span-8 bg-white border border-slate-200 p-10 rounded-3xl bento-card shadow-sm group">
+                <div class="flex justify-between items-start mb-12">
+                    <span class="text-xs font-bold py-1 px-3 bg-blue-50 text-blue-600 rounded-full">B2B SaaS / Automation</span>
+                    <span class="text-slate-400 group-hover:text-blue-600 transition">View Case Study →</span>
+                </div>
+                <h3 class="text-3xl font-bold mb-4">Telstra Marketing Engine</h3>
+                <p class="text-slate-600 max-w-lg mb-8 text-lg">
+                    Transformed a manual campaign distribution process into a seamless internal product. 
+                    Reduced time-to-market by 25% through Power Platform orchestration.
+                </p>
+                <div class="flex gap-4">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-slate-900">20hr+</div>
+                        <div class="text-xs text-slate-400 font-medium uppercase">Weekly Savings</div>
+                    </div>
+                    <div class="w-px h-10 bg-slate-200 mx-2"></div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-slate-900">100%</div>
+                        <div class="text-xs text-slate-400 font-medium uppercase">Team Adoption</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 bg-slate-900 text-white p-10 rounded-3xl bento-card shadow-lg group">
+                <span class="text-xs font-bold py-1 px-3 bg-white/10 text-white rounded-full mb-12 inline-block">Mobile / UX</span>
+                <h3 class="text-3xl font-bold mb-4">Chillist</h3>
+                <p class="text-slate-400 mb-12">
+                    Scoping and designing an MVP for procrastination prevention.
+                </p>
+                <div class="aspect-video bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl"></div>
+            </div>
+
+            <div class="md:col-span-12 bg-white border border-slate-200 p-10 rounded-3xl bento-card shadow-sm flex flex-col md:flex-row items-center gap-10">
+                <div class="flex-1">
+                    <h3 class="text-3xl font-bold mb-4">Secondhand Market Insights</h3>
+                    <p class="text-slate-600 text-lg">
+                        A data-driven deep dive into sustainable fashion. 
+                        Communicating complex market trends through interactive visualization.
+                    </p>
+                </div>
+                <div class="flex-1 w-full h-48 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-400 font-mono italic">
+                    [Data Visualization Component]
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-20 border-t border-slate-200">
+        <p class="text-slate-400 text-sm">Designed & Coded by Morgan Schmidt in 2026. Built with Inter & Tailwind.</p>
+    </footer>
+
+</body>
+</html>
