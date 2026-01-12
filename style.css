@@ -1,17 +1,18 @@
-/* Wave Styling */
-.waves {
-    position: relative;
+/* Decorative Divider Styles */
+.divider-line {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
     width: 100%;
-    /* High VH value makes it look thicker/taller on the screen */
-    height: 20vh; 
-    min-height: 100px;
-    max-height: 180px;
-    display: block;
-    /* Ensure no background bleed */
-    background: transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.wave-solid { 
-    fill: #C1DD93; 
-    opacity: 1; 
+.divider-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #C1DD93; /* Your signature green */
+    border-radius: 2px; /* Slightly rounded square */
+    transform: rotate(45deg);
 }
