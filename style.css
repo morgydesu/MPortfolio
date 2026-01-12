@@ -1,23 +1,9 @@
-/* Decorative Divider Styles */
-.divider-line {
-    height: 1px;
-    /* This gradient starts transparent, turns solid in the middle, and ends transparent */
-    background: linear-gradient(to right, transparent 0%, #e2e8f0 15%, #e2e8f0 85%, transparent 100%);
-    width: 100vw; /* Forces the line to be exactly the width of the viewport */
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.divider-dot {
-    width: 8px;
-    height: 8px;
-    background-color: #C1DD93; /* Your signature green */
-    border-radius: 2px; /* Slightly rounded square */
-    transform: rotate(45deg);
+/* Solid Minimalist Divider */
+.section-divider {
+    width: 100%;
+    height: 1px; /* Keep it thin for elegance */
+    background-color: #e2e8f0; /* Soft slate gray */
+    margin: 4rem 0;
+    border: none;
+    display: block;
 }
