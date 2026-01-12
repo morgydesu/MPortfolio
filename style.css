@@ -1,36 +1,29 @@
-/* ... existing styles ... */
-
+/* Wave Container Styling */
 .waves {
     position: relative;
     width: 100%;
-    height: 12vh; /* Slightly shorter for a sleeker look */
+    height: 12vh;
     min-height: 80px;
     max-height: 120px;
-    transition: transform 0.3s ease;
+    display: block; /* Ensures no gaps */
 }
 
-/* Interaction: Waves speed up slightly on hover */
-.wave-container:hover .parallax > use {
-    animation-duration: 6s; 
+/* Stagnant Pastel Layers (Matched to your green wave image) */
+.wave-1 { 
+    fill: #c5e1a5; /* Sage Green from your image */
+    opacity: 1; 
+} 
+.wave-2 { 
+    fill: #b39ddb; /* Soft Lavender Blue from your image */
+    opacity: 0.6; 
+} 
+.wave-3 { 
+    fill: #dcedc8; /* Light Lime Green */
+    opacity: 0.4; 
+} 
+.wave-4 { 
+    fill: #f8fafc; /* Matches your background bg-slate-50 */
+    opacity: 1; 
 }
 
-.parallax > use {
-    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
-}
-
-/* Organic Pastel Palette (Matched to your green wave image) */
-.wave-1 { fill: #c5e1a5; opacity: 0.8; } /* Light Sage Green */
-.wave-2 { fill: #b39ddb; opacity: 0.5; } /* Soft Lavender Blue */
-.wave-3 { fill: #dcedc8; opacity: 0.4; } /* Lighter Lime Green */
-.wave-4 { fill: #f8fafc; opacity: 1; }   /* Matches bg-slate-50 for a smooth transition */
-
-/* Animation speeds adjusted for a "calmer" feel */
-.parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 12s; }
-.parallax > use:nth-child(2) { animation-delay: -3s; animation-duration: 15s; }
-.parallax > use:nth-child(3) { animation-delay: -4s; animation-duration: 18s; }
-.parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 25s; }
-
-@keyframes move-forever {
-    0% { transform: translate3d(-90px, 0, 0); }
-    100% { transform: translate3d(85px, 0, 0); }
-}
+/* We removed the .parallax animation classes to keep it stagnant */
