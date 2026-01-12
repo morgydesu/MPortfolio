@@ -1,9 +1,14 @@
 /* Decorative Divider Styles */
 .divider-line {
     height: 1px;
-    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
-    width: 100%;
+    /* This gradient starts transparent, turns solid in the middle, and ends transparent */
+    background: linear-gradient(to right, transparent 0%, #e2e8f0 15%, #e2e8f0 85%, transparent 100%);
+    width: 100vw; /* Forces the line to be exactly the width of the viewport */
     position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     display: flex;
     justify-content: center;
     align-items: center;
