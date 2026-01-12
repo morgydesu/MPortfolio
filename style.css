@@ -2,28 +2,16 @@
 .waves {
     position: relative;
     width: 100%;
-    /* Increased height for a wider/thicker look */
-    height: 25vh; 
-    min-height: 150px;
-    max-height: 250px;
+    /* High VH value makes it look thicker/taller on the screen */
+    height: 20vh; 
+    min-height: 100px;
+    max-height: 180px;
     display: block;
+    /* Ensure no background bleed */
+    background: transparent;
 }
 
-/* Stagnant Layers with your requested HEX color */
-.wave-1 { 
+.wave-solid { 
     fill: #C1DD93; 
-    opacity: 1; 
-} 
-.wave-2 { 
-    fill: #C1DD93; 
-    opacity: 0.7; 
-} 
-.wave-3 { 
-    fill: #C1DD93; 
-    opacity: 0.4; 
-} 
-/* Final layer blends into your background */
-.wave-4 { 
-    fill: #f8fafc; 
     opacity: 1; 
 }
