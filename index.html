@@ -6,6 +6,7 @@
     <title>Morgan Schmidt | Product Builder</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1, h2 { font-family: 'Plus Jakarta Sans', sans-serif; }
@@ -48,14 +49,17 @@
             </div>
         </div>
     </header>
-    <div class="w-full">
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-            <defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" /></defs>
+    <div class="w-full wave-container cursor-pointer">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
             <g class="parallax">
-                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(15, 23, 42, 0.02)" />
-                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(15, 23, 42, 0.05)" />
-                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(15, 23, 42, 0.08)" />
-                <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(15, 23, 42, 0.02)" />
+                <use xlink:href="#gentle-wave" x="48" y="0" class="wave-1" />
+                <use xlink:href="#gentle-wave" x="48" y="3" class="wave-2" />
+                <use xlink:href="#gentle-wave" x="48" y="5" class="wave-3" />
+                <use xlink:href="#gentle-wave" x="48" y="7" class="wave-4" />
             </g>
         </svg>
     </div>
@@ -107,14 +111,17 @@
         </div>
     </section>
 
-    <div class="w-full">
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-            <defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" /></defs>
+    <div class="w-full wave-container cursor-pointer">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
             <g class="parallax">
-                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(15, 23, 42, 0.02)" />
-                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(15, 23, 42, 0.05)" />
-                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(15, 23, 42, 0.08)" />
-                <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(15, 23, 42, 0.02)" />
+                <use xlink:href="#gentle-wave" x="48" y="0" class="wave-1" />
+                <use xlink:href="#gentle-wave" x="48" y="3" class="wave-2" />
+                <use xlink:href="#gentle-wave" x="48" y="5" class="wave-3" />
+                <use xlink:href="#gentle-wave" x="48" y="7" class="wave-4" />
             </g>
         </svg>
     </div>
