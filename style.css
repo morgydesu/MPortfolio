@@ -3,32 +3,32 @@
 .waves {
     position: relative;
     width: 100%;
-    height: 15vh;
-    min-height: 100px;
-    max-height: 150px;
-    /* Smoothens the transition when the wave speeds up on hover */
+    height: 12vh; /* Slightly shorter for a sleeker look */
+    min-height: 80px;
+    max-height: 120px;
     transition: transform 0.3s ease;
 }
 
-/* Interaction: Speed up waves when hovering over the container */
+/* Interaction: Waves speed up slightly on hover */
 .wave-container:hover .parallax > use {
-    animation-duration: 4s; /* Faster animation on hover */
+    animation-duration: 6s; 
 }
 
 .parallax > use {
     animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
 
-/* Colorful Gradient Layers */
-.wave-1 { fill: #3b82f6; opacity: 0.7; } /* Blue-500 */
-.wave-2 { fill: #6366f1; opacity: 0.5; } /* Indigo-500 */
-.wave-3 { fill: #93c5fd; opacity: 0.3; } /* Blue-300 */
-.wave-4 { fill: #f8fafc; opacity: 1; }   /* Matches your bg-slate-50 */
+/* Organic Pastel Palette (Matched to your green wave image) */
+.wave-1 { fill: #c5e1a5; opacity: 0.8; } /* Light Sage Green */
+.wave-2 { fill: #b39ddb; opacity: 0.5; } /* Soft Lavender Blue */
+.wave-3 { fill: #dcedc8; opacity: 0.4; } /* Lighter Lime Green */
+.wave-4 { fill: #f8fafc; opacity: 1; }   /* Matches bg-slate-50 for a smooth transition */
 
-.parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 7s; }
-.parallax > use:nth-child(2) { animation-delay: -3s; animation-duration: 10s; }
-.parallax > use:nth-child(3) { animation-delay: -4s; animation-duration: 13s; }
-.parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 20s; }
+/* Animation speeds adjusted for a "calmer" feel */
+.parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 12s; }
+.parallax > use:nth-child(2) { animation-delay: -3s; animation-duration: 15s; }
+.parallax > use:nth-child(3) { animation-delay: -4s; animation-duration: 18s; }
+.parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 25s; }
 
 @keyframes move-forever {
     0% { transform: translate3d(-90px, 0, 0); }
