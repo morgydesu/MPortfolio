@@ -1,12 +1,12 @@
 const phrases = [
     "モルガンです！",
     "Morgan!",
-    "UX/UI designer.",
-    "strategic thinker.",
-    "digital innovator.",
-    "problem solver.",
-    "aspiring leader.",
-    "creative thinker.",
+    "a UX/UI designer.",
+    "a strategic thinker.",
+    "a digital innovator.",
+    "a problem solver.",
+    "a leader.",
+    "a creative thinker.",
 ];
 
 let currentIndex = 0;
