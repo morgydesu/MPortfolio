@@ -1,9 +1,54 @@
 /* Solid Minimalist Divider */
-.section-divider {
-    width: 100%;
-    height: 1px; /* Keep it thin for elegance */
-    background-color: #e2e8f0; /* Soft slate gray */
-    margin: 4rem 0;
-    border: none;
-    display: block;
+
+body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, .logo-text, .stat-value { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1 { letter-spacing: -0.04em; line-height: 1.1; }
+        h3 { letter-spacing: -0.02em; }
+        .section-label { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: 0.15em; text-transform: uppercase; }
+        .bento-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .bento-card:hover { transform: translateY(-4px); }
+        .custom-underline { background-image: linear-gradient(transparent 70%, #dbeafe 70%); background-position: 0 85%; background-repeat: no-repeat; background-size: 100% 100%; }
+        
+ /* Simple Curve Styling */
+        .curve-divider { width: 100%; line-height: 0; }
+        .curve-divider svg { display: block; width: 100%; height: 40px; }
+/* older codes */
+        /* Typography System */
+        body { 
+            font-family: 'Inter', sans-serif; 
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, .logo-text, .stat-value { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+        }
+
+        /* Modern tracking and leading */
+        h1 { letter-spacing: -0.04em; line-height: 1.1; }
+        h3 { letter-spacing: -0.02em; }
+        
+        /* Unified label style for caps */
+        .section-label {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .bento-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .bento-card:hover { transform: translateY(-4px); }
+        
+        .custom-underline { 
+            background-image: linear-gradient(transparent 70%, #C1DD93 70%); 
+            background-position: 0 85%; 
+            background-repeat: no-repeat; 
+            background-size: 100% 100%; 
+        }
+        
+        /* Update logo dot or navigation hovers */
+        .nav-link:hover { color: #5658DF; }
+        .logo-dot { background-color: #5658DF; }
+
+        /* This ensures that when the parent .group is hovered, the text changes to your soft green */
+.group:hover .view-case-study {
+    color: #C1DD93;
+    font-weight: 600;
 }
