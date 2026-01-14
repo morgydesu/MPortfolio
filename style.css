@@ -1,22 +1,68 @@
-body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
-        h1, h2, h3, .logo-text, .stat-value { font-family: 'Plus Jakarta Sans', sans-serif; }
-        h1 { letter-spacing: -0.04em; line-height: 1.1; }
-        .section-label { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: 0.15em; text-transform: uppercase; }
-        .bento-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .bento-card:hover { transform: translateY(-4px); }
-        
-        /* Updated Highlight Color */
-        .custom-underline { 
-            background-image: linear-gradient(transparent 70%, #C1DD93 70%); 
-            background-position: 0 85%; 
-            background-repeat: no-repeat; 
-            background-size: 100% 100%; 
-        }
+/* --- Base Styles --- */
+body { 
+    font-family: 'Inter', sans-serif; 
+    -webkit-font-smoothing: antialiased; 
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling on mobile */
+}
 
-        /* Group Hover for Case Study text */
-        .group:hover .case-study-text { color: #5658DF !important; font-weight: 600; }
+h1, h2, h3, .logo-text, .stat-value { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+}
 
-        #rotating-text {
-            display: inline-block;
-            transition: opacity 0.5s ease-in-out;
-        }
+h1 { 
+    letter-spacing: -0.04em; 
+    line-height: 1.1; 
+}
+
+.section-label { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    letter-spacing: 0.15em; 
+    text-transform: uppercase; 
+}
+
+/* --- Responsive Typography --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem !important; } /* Scales down the 6xl/7xl header */
+    h3 { font-size: 1.5rem !important; } /* Scales down project titles */
+    .stat-value { font-size: 1.5rem !important; } /* Keeps stats readable on one line */
+}
+
+/* --- Bento Card Interaction --- */
+.bento-card { 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+/* Hover effects only apply to devices that have a mouse (not touch) */
+@media (hover: hover) {
+    .bento-card:hover { 
+        transform: translateY(-8px); 
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); 
+    }
+    .group:hover .case-study-text { 
+        color: #5658DF !important; 
+        font-weight: 600; 
+    }
+}
+
+/* --- UI Decorations --- */
+.custom-underline { 
+    background-image: linear-gradient(transparent 70%, #C1DD93 70%); 
+    background-position: 0 85%; 
+    background-repeat: no-repeat; 
+    background-size: 100% 100%; 
+}
+
+/* --- Rotating Text PM Fix --- */
+#rotating-text {
+    display: inline-block;
+    transition: opacity 0.5s ease-in-out;
+    min-height: 1.2em; /* Ensures the page doesn't shift if a phrase spans 2 lines */
+    color: #5658DF;
+}
+
+/* Mobile-specific spacing adjustments */
+@media (max-width: 640px) {
+    .content-card {
+        padding: 1.5rem !important;
+    }
+}
