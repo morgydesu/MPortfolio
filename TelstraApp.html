@@ -35,8 +35,18 @@
             To transform a fragmented, manual communication process into a high-fidelity, automated engine that scales Field Services engagement while returning 500+ annual hours of capacity to the Field Experience (FX) team.
         </p>
 
-        <div class="img-container aspect-video  rounded-[32px] overflow-hidden shadow-2xl mb-12 flex items-center justify-center bg-[#C1DD93]">
-            <img src="terasu_header.png" alt="FX Engagement Portal Case Study" class="w-full h-full object-cover">
+        <div class="relative group">
+            <div class="img-container aspect-video shadow-2xl mb-12 bg-white flex items-center justify-center border border-slate-200 overflow-hidden">
+                <img src="desktopUser.png" alt="Portal to Email Ecosystem" class="w-full h-full object-cover">
+                
+                <div class="absolute bottom-6 left-6 right-6 flex justify-between items-center bg-white/80 backdrop-blur-md p-4 rounded-xl border border-white/20 shadow-lg">
+                    <div class="flex items-center gap-3">
+                        <div class="w-2 h-2 bg-[#5658DF] rounded-full animate-pulse"></div>
+                        <p class="text-xs font-bold uppercase tracking-tighter text-slate-700">Live Ecosystem: Portal Input → Automated Output</p>
+                    </div>
+                    <span class="text-[10px] font-bold text-[#5658DF] bg-[#5658DF]/10 px-2 py-1 rounded">UX TO DELIVERY</span>
+                </div>
+            </div>
         </div>
         
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -125,18 +135,26 @@
             <p class="text-lg text-slate-600 leading-relaxed mb-10">
                 The primary challenge was technical debt. The legacy state relied on manual PDF conversions that broke in Outlook, while the new engineered state uses a portal-driven HTML engine.
             </p>
+            
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="space-y-4">
-                    <div class="img-container aspect-[3/4] border-2 border-dashed border-slate-300 bg-slate-100 flex items-center justify-center text-center px-6">
-                        <span class="state-label bg-slate-500 text-white">Legacy</span>
-                        <div class="text-slate-400 text-xs">[Manual PDF-to-Email, Broken Formatting]</div>
+                    <div class="img-container aspect-[4/3] rounded-2xl overflow-hidden border-2 border-dashed border-slate-300 bg-slate-100 relative">
+                        <span class="state-label bg-slate-500 text-white absolute top-4 left-4 z-10">Legacy</span>
+                        <video autoplay loop muted playsinline class="w-full h-full object-cover grayscale opacity-70">
+                            <source src="Old_EngagementPortal.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                     <p class="text-sm text-slate-500 italic text-center">Fragmented formatting and manual PDF attachments.</p>
                 </div>
+        
                 <div class="space-y-4">
-                    <div class="img-container aspect-[3/4] border-2 border-[#C1DD93] shadow-lg flex items-center justify-center text-center px-6">
-                        <span class="state-label bg-[#5658DF] text-white">Engineered</span>
-                        <div class="text-slate-400 text-xs">[Portal-Driven HTML, Brand Consistent]</div>
+                    <div class="img-container aspect-[4/3] rounded-2xl overflow-hidden border-2 border-[#C1DD93] shadow-lg relative">
+                        <span class="state-label bg-[#5658DF] text-white absolute top-4 left-4 z-10">Engineered</span>
+                        <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                            <source src="updated_SuperUser.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                     <p class="text-sm text-slate-500 italic text-center">Automated, responsive HTML with 100% brand fidelity.</p>
                 </div>
