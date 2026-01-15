@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study | Telstra Marketing Engine</title>
+    <title>Case Study | Telstra Field Services Marketing Engine</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;1,300&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
     <style>
@@ -11,6 +11,12 @@
         h1, h2, h3, .logo-text { font-family: 'Plus Jakarta Sans', sans-serif; }
         .section-label { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: 0.15em; text-transform: uppercase; }
         .content-card { background: white; border: 1px solid #e2e8f0; border-radius: 24px; padding: 2rem; }
+        .method-tag { background: #EEF2FF; color: #4338CA; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; }
+        .takeaway-card { background: #F8FAFC; border: 1px solid #E2E8F0; padding: 1.5rem; border-radius: 20px; transition: transform 0.2s; }
+        .takeaway-card:hover { transform: translateY(-4px); border-color: #5658DF; }
+        .img-container { position: relative; border-radius: 24px; overflow: hidden; background: #e2e8f0; }
+        .state-label { position: absolute; top: 1rem; left: 1rem; padding: 0.5rem 1rem; border-radius: 99px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+        .strategy-dot { height: 8px; width: 8px; background-color: #5658DF; border-radius: 50%; display: inline-block; margin-right: 10px; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -22,100 +28,249 @@
         </a>
     </nav>
 
-    <header class="max-w-4xl mx-auto px-6 pb-20">
-        <span class="section-label text-[10px] font-bold px-3 py-1 rounded-full mb-6 inline-block" style="background-color: #C1DD93; color: #5658DF;">Product Management & Automation</span>
-        <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">Telstra Marketing Engine</h1>
-        <p class="text-xl text-slate-600 leading-relaxed max-w-2xl">
-            Optimizing internal campaign distribution by bridging the gap between manual marketing workflows and automated technical execution.
+    <header class="max-w-4xl mx-auto px-6 pb-12 text-center md:text-left">
+        <span class="section-label text-[10px] font-bold px-3 py-1 rounded-full mb-6 inline-block" style="background-color: #C1DD93; color: #5658DF;">End-to-End Product Management</span>
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">Telstra Engagement Portal</h1>
+        <p class="text-xl text-slate-600 leading-relaxed max-w-3xl mb-12">
+            To transform a fragmented, manual communication process into a high-fidelity, automated engine that scales Field Services engagement while returning 500+ annual hours of capacity to the Field Experience (FX) team.
         </p>
+
+        <div class="img-container aspect-video  rounded-[32px] overflow-hidden shadow-2xl mb-12 flex items-center justify-center bg-[#C1DD93]">
+            <img src="terasu_header.png" alt="FX Engagement Portal Case Study" class="w-full h-full object-cover">
+        </div>
         
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="content-card">
-                <p class="text-[10px] section-label text-slate-400 mb-1">Role</p>
-                <p class="font-bold text-sm">Product Lead</p>
+                <p class="text-[10px] section-label text-slate-400 mb-1">My Role</p>
+                <p class="font-bold text-sm">Lead Product Manager</p>
             </div>
+
             <div class="content-card">
                 <p class="text-[10px] section-label text-slate-400 mb-1">Duration</p>
-                <p class="font-bold text-sm">3 Months</p>
+                <p class="font-bold text-sm">10 Months <span class="text-[10px] font-normal text-slate-400 block">(May '25 - Feb '26)</span></p>
             </div>
-            <div class="content-card">
-                <p class="text-[10px] section-label text-slate-400 mb-1">Impact</p>
-                <p class="font-bold text-sm text-[#5658DF]">25% Efficiency ↑</p>
+
+            <div class="content-card border-[#C1DD93] bg-[#C1DD93]/5">
+                <p class="text-[10px] section-label text-[#5658DF] mb-1">Impact</p>
+                <p class="font-bold text-sm text-[#166534]">500+ Hours Saved / Yr</p>
             </div>
+
             <div class="content-card">
-                <p class="text-[10px] section-label text-slate-400 mb-1">Tools</p>
-                <p class="font-bold text-sm">Power Platform</p>
+                <p class="text-[10px] section-label text-slate-400 mb-1">Toolset</p>
+                <div class="flex flex-wrap gap-1 mt-1">
+                    <p class="font-bold text-sm">Power Automate</p>
+                    <p class="font-bold text-sm">Power Apps</p>
+                    <p class="font-bold text-sm">VML/HTML</p>
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="max-w-6xl mx-auto px-6 mb-20">
-        <div class="w-full aspect-video rounded-[32px] overflow-hidden bg-slate-200 shadow-xl">
-            <img src="/api/placeholder/1200/600" alt="Project Hero Image" class="w-full h-full object-cover">
-        </div>
-    </section>
-
     <article class="max-w-3xl mx-auto px-6 space-y-24 pb-32">
-        
+
         <section>
-            <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
-                <span style="color: #5658DF;">01.</span> The Challenge
-            </h2>
-            <div class="space-y-4 text-lg text-slate-600 leading-relaxed">
-                <p>
-                    Telstra’s marketing teams were manually managing campaign assets across multiple disconnected platforms. This "swivel-chair" process led to data entry errors, delayed launches, and a lack of transparency for stakeholders.
-                </p>
-                <p>
-                    <strong>The Goal:</strong> To centralize campaign management and automate the hand-off between marketing strategy and technical distribution.
-                </p>
+            <div class="flex items-center gap-4 mb-6">
+                <h2 class="text-3xl font-bold">01. Problem Landscape</h2>
+                <span class="method-tag">THE "WHY"</span>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-3">The User Friction</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Field staff were disengaged from corporate communications. Research revealed that portals were hard to find, submission forms were intimidating, and "confirmation anxiety" led to duplicate inquiries.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-3">The Technical Debt</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        The FX team spent hours manually converting PDFs into newsletters. These newsletters frequently "broke" in legacy Outlook clients, resulting in unprofessional branding and unreadable content.
+                    </p>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="bg-slate-900 p-10 rounded-[40px] text-white">
+            <h2 class="text-3xl font-bold mb-8">02. Product Strategy</h2>
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <div class="strategy-dot mt-2"></div>
+                    <div>
+                        <h4 class="font-bold text-[#C1DD93]">Unified Access</h4>
+                        <p class="text-slate-400 text-sm">Consolidate disparate entry points into a single "Engagement Portal" embedded directly where staff already reviews (eg. Tech Plus, Communication Collection, etc).</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="strategy-dot mt-2"></div>
+                    <div>
+                        <h4 class="font-bold text-[#C1DD93]">Automation-First Logic</h4>
+                        <p class="text-slate-400 text-sm">Move away from manual design. Use Power Automate to bridge the gap between form data and final HTML rendering.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="strategy-dot mt-2"></div>
+                    <div>
+                        <h4 class="font-bold text-[#C1DD93]">Validation & Reassurance</h4>
+                        <p class="text-slate-400 text-sm">Implement a "Preview Mode" and automated approval loops to build trust and eliminate manual verification steps.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="bg-[#C1DD93]/10 p-8 rounded-[32px] border border-[#C1DD93]">
-            <h2 class="text-3xl font-bold mb-6 flex items-center gap-3 text-slate-900">
-                <span style="color: #5658DF;">02.</span> Product Strategy
-            </h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="font-bold text-sm section-label mb-3 text-[#5658DF]">Stakeholder Alignment</h3>
-                    <p class="text-slate-600">Conducted user interviews with 12 marketing leads to map the current "pain-points" and identify requirements for the MVP.</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-sm section-label mb-3 text-[#5658DF]">Prioritization</h3>
-                    <p class="text-slate-600">Used the RICE framework to prioritize features, focusing on automated notifications first to solve the transparency gap.</p>
-                </div>
-            </div>
-        </section>
-
         <section>
-            <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
-                <span style="color: #5658DF;">03.</span> The Implementation
-            </h2>
-            <p class="text-lg text-slate-600 leading-relaxed mb-8">
-                I led the development of a custom orchestration engine using Power Apps and Power Automate. This solution served as a single source of truth, connecting marketing inputs directly to downstream execution teams.
+            <div class="flex items-center gap-4 mb-6">
+                <h2 class="text-3xl font-bold">03. Visual Transformation</h2>
+                <span class="method-tag">EVOLUTION</span>
+            </div>
+            <p class="text-lg text-slate-600 leading-relaxed mb-10">
+                The primary challenge was technical debt. The legacy state relied on manual PDF conversions that broke in Outlook, while the new engineered state uses a portal-driven HTML engine.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <img src="/api/placeholder/500/350" class="rounded-2xl border border-slate-200 shadow-sm" alt="Feature Screenshot 1">
-                <img src="/api/placeholder/500/350" class="rounded-2xl border border-slate-200 shadow-sm" alt="Feature Screenshot 2">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <div class="img-container aspect-[3/4] border-2 border-dashed border-slate-300 bg-slate-100 flex items-center justify-center text-center px-6">
+                        <span class="state-label bg-slate-500 text-white">Legacy</span>
+                        <div class="text-slate-400 text-xs">[Manual PDF-to-Email, Broken Formatting]</div>
+                    </div>
+                    <p class="text-sm text-slate-500 italic text-center">Fragmented formatting and manual PDF attachments.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="img-container aspect-[3/4] border-2 border-[#C1DD93] shadow-lg flex items-center justify-center text-center px-6">
+                        <span class="state-label bg-[#5658DF] text-white">Engineered</span>
+                        <div class="text-slate-400 text-xs">[Portal-Driven HTML, Brand Consistent]</div>
+                    </div>
+                    <p class="text-sm text-slate-500 italic text-center">Automated, responsive HTML with 100% brand fidelity.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex items-center gap-4 mb-6">
+                <h2 class="text-3xl font-bold">04. Implementation</h2>
+                <span class="method-tag">THE "HOW"</span>
+            </div>
+            <div class="content-card mb-8">
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-bold text-[#5658DF] mb-2 uppercase text-xs tracking-widest">Phase 1: Discovery (Double Diamond)</h4>
+                        <p class="text-sm text-slate-600">Conducted primary user sessions to map the "Engagement Journey." Identified that 70% of friction was due to unclear UX copy of the Engagement Portal.</p>
+                    </div>
+                    <hr class="border-slate-100">
+                    <div>
+                        <h4 class="font-bold text-[#5658DF] mb-2 uppercase text-xs tracking-widest">Phase 2: Technical Iteration</h4>
+                        <p class="text-sm text-slate-600">Built the Power Automate flow and the hybrid HTML/VML template. Pushed adjustments in October to fix deep-link issues between SOW and the Engagement portal.</p>
+                    </div>
+                    <hr class="border-slate-100">
+                    <div>
+                        <h4 class="font-bold text-[#5658DF] mb-2 uppercase text-xs tracking-widest">Phase 3: Super User Launch</h4>
+                        <p class="text-sm text-slate-600">Deployed to internal "FX Super Users" in November. Monitored data integrity, user process acceptance, and automation flow.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section>
+            <div class="flex items-center gap-4 mb-6">
+                <h2 class="text-3xl font-bold">05. Lifecycle Strategy</h2>
+                <span class="method-tag">TIMELINE</span>
+            </div>
+            <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                Managing a 10-month timeline required balancing immediate "Super User" needs with the long-term marketing vision. I successfully decoupled technical stability from market-wide adoption.
+            </p>
+
+            <div class="space-y-4 mt-8">
+                <div class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-slate-200">
+                    <div class="w-24 shrink-0 font-bold text-[#5658DF] text-sm uppercase pt-1">May – Oct</div>
+                    <div>
+                        <h4 class="font-bold">Discovery & Adjustments</h4>
+                        <p class="text-sm text-slate-500">Double Diamond research identified Outlook formatting as the primary bottleneck, leading to a pivot in technical strategy.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-slate-200">
+                    <div class="w-24 shrink-0 font-bold text-[#5658DF] text-sm uppercase pt-1">Nov – Jan</div>
+                    <div>
+                        <h4 class="font-bold">Super User Beta (Pilot)</h4>
+                        <p class="text-sm text-slate-500">Soft launch for technical validation and internal "Hypercare" support.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 p-4 bg-[#C1DD93]/20 rounded-2xl border border-[#C1DD93]">
+                    <div class="w-24 shrink-0 font-bold text-[#5658DF] text-sm uppercase pt-1">Feb</div>
+                    <div>
+                        <h4 class="font-bold">Full Go-To-Market (GTM) Deployment</h4>
+                        <p class="text-sm text-slate-500">Final transition to marketing-led distribution across FBU and Excellence Forum channels.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm">
+            <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                <span style="color: #5658DF;">06.</span> Technical UX Fidelity
+            </h2>
+            
+            <div class="mb-8">
+                <p class="text-lg font-medium text-slate-800 italic mb-3">
+                    "Technical constraints are just product requirements in disguise."
+                </p>
+                <p class="text-slate-600 leading-relaxed border-l-4 border-[#C1DD93] pl-4">
+                    By re-engineering the email engine into a hybrid VML/HTML structure, I ensured 100% brand fidelity and layout stability across different email clients—eliminating the "broken" formatting issues that previously plagued field communications.
+                </p>
+            </div>
+        
+            <div class="p-6 bg-slate-900 rounded-xl mt-6">
+                <p class="text-xs font-mono text-blue-300 mb-2">// Sample MSO Compliance Logic</p>
+                <code class="text-xs text-slate-300 block leading-relaxed">
+                    &lt;!--[if mso]&gt;<br>
+                    &nbsp;&nbsp;&lt;v:roundrect fillcolor="#0d54ff" style="width:650px; height:96px;"&gt;<br>
+                    &nbsp;&nbsp;&lt;v:textbox inset="0,0,0,0"&gt;<br>
+                    &lt;![endif]--&gt;
+                </code>
             </div>
         </section>
 
         <section>
             <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
-                <span style="color: #5658DF;">04.</span> The Impact
+                <span style="color: #5658DF;">07.</span> Product Takeaways
             </h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="text-center p-6 border-b md:border-b-0 md:border-r border-slate-200">
-                    <div class="text-4xl font-extrabold text-[#5658DF] mb-2">25%</div>
-                    <p class="text-xs section-label text-slate-400">Faster Launch Time</p>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="takeaway-card">
+                    <div class="flex items-center gap-2 mb-3">
+                        <i data-lucide="users" class="w-5 h-5 text-[#5658DF]"></i>
+                        <h4 class="font-bold text-sm uppercase tracking-tight">Technical Empathy</h4>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Bridging the gap between design desire and legacy Outlook reality. Success was found by engineering for legacy constraints without sacrificing brand prestige.
+                    </p>
                 </div>
-                <div class="text-center p-6 border-b md:border-b-0 md:border-r border-slate-200">
-                    <div class="text-4xl font-extrabold text-[#5658DF] mb-2">20hr</div>
-                    <p class="text-xs section-label text-slate-400">Weekly Staff Savings</p>
+
+                <div class="takeaway-card">
+                    <div class="flex items-center gap-2 mb-3">
+                        <i data-lucide="target" class="w-5 h-5 text-[#5658DF]"></i>
+                        <h4 class="font-bold text-sm uppercase tracking-tight">Outcome vs. Output</h4>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        The outcome was hours of human capacity returned to the FX team. Focusing on the "Hours Saved" KPI kept stakeholders aligned during timeline shifts.
+                    </p>
                 </div>
-                <div class="text-center p-6">
-                    <div class="text-4xl font-extrabold text-[#5658DF] mb-2">Zero</div>
-                    <p class="text-xs section-label text-slate-400">Critical Entry Errors</p>
+
+                <div class="takeaway-card">
+                    <div class="flex items-center gap-2 mb-3">
+                        <i data-lucide="layers" class="w-5 h-5 text-[#5658DF]"></i>
+                        <h4 class="font-bold text-sm uppercase tracking-tight">Phased De-risking</h4>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Separating the Super User launch from the GTM was vital. It allowed us to fix edge cases in a controlled environment before wide-scale adoption.
+                    </p>
+                </div>
+
+                <div class="takeaway-card">
+                    <div class="flex items-center gap-2 mb-3">
+                        <i data-lucide="refresh-cw" class="w-5 h-5 text-[#5658DF]"></i>
+                        <h4 class="font-bold text-sm uppercase tracking-tight">Iterative Research</h4>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Research isn't a one-time step. User feedback must be a continuous loop throughout the development lifecycle to ensure product-market fit.
+                    </p>
                 </div>
             </div>
         </section>
@@ -124,36 +279,16 @@
 
     <footer class="py-10 border-t border-slate-200" style="background-color: #5658DF;"> 
         <div class="max-w-6xl mx-auto px-6 flex flex-col items-center">
-            
             <div class="flex flex-wrap justify-center gap-8 mb-6">
-                <a href="mailto:bizmesssyd@gmail.com" 
-                   class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70" 
-                   style="color: #FFFDD0; opacity: 0.9;">
-                   Contact
-                </a>
-    
-                <a href="Morgan_SchmidtResume.pdf" target="_blank" 
-                   class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70" 
-                   style="color: #FFFDD0;  opacity: 0.9;">
-                   Resume
-                </a>
-    
-                <a href="https://linkedin.com/in/yourusername" target="_blank" 
-                   class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70" 
-                   style="color: #FFFDD0;  opacity: 0.9;">
-                   LinkedIn
-                </a>
+                <a href="mailto:bizmesssyd@gmail.com" class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70" style="color: #FFFDD0; opacity: 0.9;">Contact</a>
+                <a href="Morgan_SchmidtResume.pdf" target="_blank" class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70" style="color: #FFFDD0; opacity: 0.9;">Resume</a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70" style="color: #FFFDD0; opacity: 0.9;">LinkedIn</a>
             </div>
-    
-            <p class="text-xs tracking-widest " style="color: #B2C3F9;">
-                Designed & Coded by Morgan Schmidt ☺ 2026
-            </p>
+            <p class="text-xs tracking-widest text-[#B2C3F9]">Designed & Coded by Morgan Schmidt &bull; 2026</p>
         </div>
     </footer>
 
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
