@@ -6,43 +6,39 @@
     <title>Case Study | Telstra Field Services Marketing Engine</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;1,300&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
         body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         h1, h2, h3, .logo-text { font-family: 'Plus Jakarta Sans', sans-serif; }
         .section-label { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: 0.15em; text-transform: uppercase; }
-        .content-card { background: white; border: 1px solid #e2e8f0; border-radius: 24px; padding: 2rem; }
+        .content-card { background: white; border: 1px solid #e2e8f0; border-radius: 24px; padding: 1.5rem; }
+        @media (min-width: 768px) { .content-card { padding: 2rem; } }
         .method-tag { background: #EEF2FF; color: #4338CA; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; }
-        .takeaway-card { background: #F8FAFC; border: 1px solid #E2E8F0; padding: 1.5rem; border-radius: 20px; transition: transform 0.2s; }
-        .takeaway-card:hover { transform: translateY(-4px); border-color: #5658DF; }
         .img-container { position: relative; border-radius: 24px; overflow: hidden; background: #e2e8f0; }
-        .state-label { position: absolute; top: 1rem; left: 1rem; padding: 0.5rem 1rem; border-radius: 99px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
-        .strategy-dot { height: 8px; width: 8px; background-color: #5658DF; border-radius: 50%; display: inline-block; margin-right: 10px; }
+        .state-label { position: absolute; top: 1rem; left: 1rem; padding: 0.5rem 1rem; border-radius: 99px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; z-index: 10; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-50 text-slate-900 leading-relaxed">
 
-    <nav class="max-w-4xl mx-auto px-6 py-12">
-        <a href="index.html" class="flex items-center gap-2 text-slate-500 hover:text-[#5658DF] transition-all group">
+    <nav class="max-w-4xl mx-auto px-6 py-8 md:py-12">
+        <a href="index.html" class="flex items-center gap-2 text-slate-500 hover:text-[#5658DF] transition-all group w-fit">
             <i data-lucide="arrow-left" class="w-4 h-4 group-hover:-translate-x-1 transition-transform"></i>
             <span class="text-sm font-medium">Back to Portfolio</span>
         </a>
     </nav>
 
-    <header class="max-w-4xl mx-auto px-6 pb-12 text-center md:text-left">
+    <header class="max-w-4xl mx-auto px-6 pb-12">
         <span class="section-label text-[10px] font-bold px-3 py-1 rounded-full mb-6 inline-block" style="background-color: #C1DD93; color: #5658DF;">End-to-End Product Management</span>
-        <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">Telstra Engagement Portal</h1>
-        <p class="text-xl text-slate-600 leading-relaxed max-w-3xl mb-12">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">Telstra Engagement Portal</h1>
+        <p class="text-lg md:text-xl text-slate-600 leading-relaxed max-w-3xl mb-12">
             To transform a fragmented, manual communication process into a high-fidelity, automated engine that scales Field Services engagement while returning 500+ annual hours of capacity to the Field Experience (FX) team.
         </p>
 
-        <div class="relative group">
-            <div class="img-container aspect-video shadow-2xl mb-12 bg-[#C1DD93] rounded-[32px] p-8 flex items-center justify-center overflow-hidden">
+        <div class="relative group mb-12">
+            <div class="img-container aspect-video shadow-2xl bg-[#C1DD93] rounded-[24px] md:rounded-[32px] p-4 md:p-8 flex items-center justify-center overflow-hidden">
+                <img src="engagementPortalMockup.png" alt="Portal to Email Ecosystem" class="w-full h-full object-cover rounded-[16px] md:rounded-[20px] shadow-sm transition-transform duration-500 group-hover:scale-[1.02]">
                 
-                <img src="engagementPortalMockup.png" 
-                     alt="Portal to Email Ecosystem" 
-                     class="w-full h-full object-cover rounded-[20px] shadow-sm transition-transform duration-500 group-hover:scale-[1.02]">
-                
-                <div class="absolute bottom-12 left-12 right-12 flex justify-between items-center bg-white/80 backdrop-blur-md p-4 rounded-xl border border-white/20 shadow-lg">
+                <div class="hidden sm:flex absolute bottom-6 md:bottom-12 left-6 md:left-12 right-6 md:right-12 justify-between items-center bg-white/80 backdrop-blur-md p-4 rounded-xl border border-white/20 shadow-lg">
                     <div class="flex items-center gap-3">
                         <div class="w-2 h-2 bg-[#5658DF] rounded-full animate-pulse"></div>
                         <p class="text-xs font-bold uppercase tracking-tighter text-slate-700">Live Ecosystem: Portal Input → Automated Output</p>
@@ -57,23 +53,19 @@
                 <p class="text-[10px] section-label text-slate-400 mb-1">My Role</p>
                 <p class="font-bold text-sm">Lead Product Manager</p>
             </div>
-
             <div class="content-card">
                 <p class="text-[10px] section-label text-slate-400 mb-1">Duration</p>
                 <p class="font-bold text-sm">10 Months <span class="text-[10px] font-normal text-slate-400 block">(May '25 - Feb '26)</span></p>
             </div>
-
             <div class="content-card border-[#C1DD93] bg-[#C1DD93]/5">
                 <p class="text-[10px] section-label text-[#5658DF] mb-1">Impact</p>
                 <p class="font-bold text-sm text-[#166534]">500+ Hours Saved / Yr</p>
             </div>
-
             <div class="content-card">
                 <p class="text-[10px] section-label text-slate-400 mb-1">Toolset</p>
                 <div class="flex flex-wrap gap-1 mt-1">
-                    <p class="font-bold text-sm">Power Automate</p>
-                    <p class="font-bold text-sm">Power Apps</p>
-                    <p class="font-bold text-sm">VML/HTML</p>
+                    <p class="font-bold text-[10px] md:text-sm bg-slate-50 px-1 rounded">Power Automate</p>
+                    <p class="font-bold text-[10px] md:text-sm bg-slate-50 px-1 rounded">VML/HTML</p>
                 </div>
             </div>
         </div>
@@ -82,11 +74,11 @@
     <article class="max-w-3xl mx-auto px-6 space-y-24 pb-32">
 
         <section>
-            <div class="flex items-center gap-4 mb-6">
+            <div class="flex items-center gap-4 mb-8">
                 <h2 class="text-3xl font-bold">01. Problem Landscape</h2>
                 <span class="method-tag">THE "WHY"</span>
             </div>
-            <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div>
                     <h3 class="text-lg font-bold mb-3">The User Friction</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
@@ -100,11 +92,10 @@
                     </p>
                 </div>
             </div>
-            
         </section>
 
-        <section class="bg-[#f0f7e6] p-10 rounded-[40px] border border-[#dce9c6] shadow-sm">
-            <h2 class="text-3xl font-bold mb-8 text-slate-900">02. Product Strategy</h2>
+        <section class="bg-[#f0f7e6] p-8 md:p-12 rounded-[40px] border border-[#dce9c6] shadow-sm">
+            <h2 class="text-3xl font-bold mb-10 text-slate-900">02. Product Strategy</h2>
             <div class="space-y-8">
                 <div class="flex items-start gap-4">
                     <div class="w-3 h-3 rounded-full mt-1.5 shrink-0 bg-[#C1DD93] shadow-[0_0_10px_rgba(193,221,147,0.5)]"></div>
@@ -113,7 +104,6 @@
                         <p class="text-slate-600 text-sm leading-relaxed">Consolidate disparate entry points into a single "Engagement Portal" embedded directly where staff already reviews (eg. Tech Plus, Communication Collection, etc).</p>
                     </div>
                 </div>
-        
                 <div class="flex items-start gap-4">
                     <div class="w-3 h-3 rounded-full mt-1.5 shrink-0 bg-[#C1DD93] shadow-[0_0_10px_rgba(193,221,147,0.5)]"></div>
                     <div>
@@ -121,7 +111,6 @@
                         <p class="text-slate-600 text-sm leading-relaxed">Move away from manual design. Use Power Automate to bridge the gap between form data and final HTML rendering.</p>
                     </div>
                 </div>
-        
                 <div class="flex items-start gap-4">
                     <div class="w-3 h-3 rounded-full mt-1.5 shrink-0 bg-[#C1DD93] shadow-[0_0_10px_rgba(193,221,147,0.5)]"></div>
                     <div>
@@ -133,33 +122,25 @@
         </section>
 
         <section>
-            <div class="flex items-center gap-4 mb-6">
+            <div class="flex items-center gap-4 mb-8">
                 <h2 class="text-3xl font-bold">03. Visual Transformation</h2>
                 <span class="method-tag">EVOLUTION</span>
             </div>
             <p class="text-lg text-slate-600 leading-relaxed mb-10">
                 The primary challenge was technical debt. The legacy state relied on manual PDF conversions that broke in Outlook, while the new engineered state uses a portal-driven HTML engine.
             </p>
-            
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="space-y-4">
-                    <div class="img-container aspect-[4/3] rounded-2xl overflow-hidden border-2 border-dashed border-slate-300 bg-slate-100 relative">
-                        <span class="state-label bg-slate-500 text-white absolute top-4 left-4 z-10">Legacy</span>
-                        <video autoplay loop muted playsinline class="w-full h-full object-cover grayscale opacity-70">
-                            <source src="Old_EngagementPortal.mov" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                    <div class="img-container aspect-video md:aspect-[4/3] border-2 border-dashed border-slate-300 bg-slate-100">
+                        <span class="state-label bg-slate-500 text-white">Legacy</span>
+                        <video autoplay loop muted playsinline class="w-full h-full object-cover grayscale opacity-70"><source src="Old_EngagementPortal.mov" type="video/mp4"></video>
                     </div>
                     <p class="text-sm text-slate-500 italic text-center">Fragmented formatting and manual PDF attachments.</p>
                 </div>
-        
                 <div class="space-y-4">
-                    <div class="img-container aspect-[4/3] rounded-2xl overflow-hidden border-2 border-[#C1DD93] shadow-lg relative">
-                        <span class="state-label bg-[#5658DF] text-white absolute top-4 left-4 z-10">Engineered</span>
-                        <video autoplay loop muted playsinline class="w-full h-full object-cover">
-                            <source src="updated_SuperUser.mov" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                    <div class="img-container aspect-video md:aspect-[4/3] border-2 border-[#C1DD93] shadow-lg">
+                        <span class="state-label bg-[#5658DF] text-white">Engineered</span>
+                        <video autoplay loop muted playsinline class="w-full h-full object-cover"><source src="updated_SuperUser.mov" type="video/mp4"></video>
                     </div>
                     <p class="text-sm text-slate-500 italic text-center">Automated, responsive HTML with 100% brand fidelity.</p>
                 </div>
@@ -167,12 +148,12 @@
         </section>
 
         <section>
-            <div class="flex items-center gap-4 mb-6">
+            <div class="flex items-center gap-4 mb-8">
                 <h2 class="text-3xl font-bold">04. Implementation</h2>
                 <span class="method-tag">THE "HOW"</span>
             </div>
-            <div class="content-card mb-8">
-                <div class="space-y-6">
+            <div class="content-card">
+                <div class="space-y-8">
                     <div>
                         <h4 class="font-bold text-[#5658DF] mb-2 uppercase text-xs tracking-widest">Phase 1: Discovery (Double Diamond)</h4>
                         <p class="text-sm text-slate-600">Conducted primary user sessions to map the "Engagement Journey." Identified that 70% of friction was due to unclear UX copy of the Engagement Portal.</p>
@@ -189,74 +170,66 @@
                     </div>
                 </div>
             </div>
-            
         </section>
 
         <section>
-            <div class="flex items-center gap-4 mb-6">
+            <div class="flex items-center gap-4 mb-8">
                 <h2 class="text-3xl font-bold">05. Lifecycle Strategy</h2>
                 <span class="method-tag">TIMELINE</span>
             </div>
-            <p class="text-lg text-slate-600 leading-relaxed mb-8">
+            <p class="text-lg text-slate-600 leading-relaxed mb-10">
                 Managing a 10-month timeline required balancing immediate "Super User" needs with the long-term marketing vision. I successfully decoupled technical stability from market-wide adoption.
             </p>
-
-            <div class="space-y-4 mt-8">
-                <div class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-slate-200">
+            <div class="space-y-4">
+                <div class="flex flex-col sm:flex-row items-start gap-4 p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
                     <div class="w-24 shrink-0 font-bold text-[#5658DF] text-sm uppercase pt-1">May – Oct</div>
                     <div>
-                        <h4 class="font-bold">Discovery & Adjustments</h4>
+                        <h4 class="font-bold text-slate-900">Discovery & Adjustments</h4>
                         <p class="text-sm text-slate-500">Double Diamond research identified Outlook formatting as the primary bottleneck, leading to a pivot in technical strategy.</p>
                     </div>
                 </div>
-                <div class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-slate-200">
+                <div class="flex flex-col sm:flex-row items-start gap-4 p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
                     <div class="w-24 shrink-0 font-bold text-[#5658DF] text-sm uppercase pt-1">Nov – Jan</div>
                     <div>
-                        <h4 class="font-bold">Super User Beta (Pilot)</h4>
+                        <h4 class="font-bold text-slate-900">Super User Beta (Pilot)</h4>
                         <p class="text-sm text-slate-500">Soft launch for technical validation and internal "Hypercare" support.</p>
                     </div>
                 </div>
-                <div class="flex items-start gap-4 p-4 bg-[#C1DD93]/20 rounded-2xl border border-[#C1DD93]">
+                <div class="flex flex-col sm:flex-row items-start gap-4 p-5 bg-[#C1DD93]/20 rounded-2xl border border-[#C1DD93] shadow-sm">
                     <div class="w-24 shrink-0 font-bold text-[#5658DF] text-sm uppercase pt-1">Feb</div>
                     <div>
-                        <h4 class="font-bold">Full Go-To-Market (GTM) Deployment</h4>
+                        <h4 class="font-bold text-slate-900">Full Go-To-Market (GTM) Deployment</h4>
                         <p class="text-sm text-slate-500">Final transition to marketing-led distribution across FBU and Excellence Forum channels.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm">
-            <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+        <section class="bg-white p-8 md:p-12 rounded-[32px] border border-slate-200 shadow-sm">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 flex items-center gap-3">
                 <span style="color: #5658DF;">06.</span> Technical UX Fidelity
             </h2>
-            
-            <div class="mb-8">
-                <p class="text-lg font-medium text-slate-800 italic mb-3">
-                    "Technical constraints are just product requirements in disguise."
-                </p>
-                <p class="text-slate-600 leading-relaxed border-l-4 border-[#C1DD93] pl-4">
-                    By re-engineering the email engine into a hybrid VML/HTML structure, I ensured 100% brand fidelity and layout stability across different email clients—eliminating the "broken" formatting issues that previously plagued field communications.
-                </p>
-            </div>
-        
-            <div class="p-6 bg-slate-900 rounded-xl mt-6">
+            <p class="text-lg font-medium text-slate-800 italic mb-4">"Technical constraints are just product requirements in disguise."</p>
+            <p class="text-slate-600 leading-relaxed border-l-4 border-[#C1DD93] pl-4 mb-8">
+                By re-engineering the email engine into a hybrid VML/HTML structure, I ensured 100% brand fidelity and layout stability across different email clients—eliminating the "broken" formatting issues that previously plagued field communications.
+            </p>
+            <div class="p-6 bg-slate-900 rounded-xl overflow-x-auto shadow-inner">
                 <p class="text-xs font-mono text-blue-300 mb-2">// Sample MSO Compliance Logic</p>
-                <code class="text-xs text-slate-300 block leading-relaxed">
-                    &lt;!--[if mso]&gt;<br>
-                    &nbsp;&nbsp;&lt;v:roundrect fillcolor="#0d54ff" style="width:650px; height:96px;"&gt;<br>
-                    &nbsp;&nbsp;&lt;v:textbox inset="0,0,0,0"&gt;<br>
-                    &lt;![endif]--&gt;
+                <code class="text-xs text-slate-300 block leading-relaxed whitespace-pre">
+&lt;!--[if mso]&gt;
+  &lt;v:roundrect fillcolor="#0d54ff" style="width:650px; height:96px;"&gt;
+  &lt;v:textbox inset="0,0,0,0"&gt;
+&lt;![endif]--&gt;
                 </code>
             </div>
         </section>
 
         <section>
-            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+            <h2 class="text-2xl md:text-3xl font-bold mb-10 flex items-center gap-3">
                 <span style="color: #5658DF;">07.</span> Product Takeaways
             </h2>
-            <div class="grid md:grid-cols-2 gap-4">
-                <div class="content-card border-l-4 border-[#C1DD93]">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="content-card border-l-4 border-[#C1DD93] hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-2 mb-3">
                         <i data-lucide="users" class="w-5 h-5 text-[#5658DF]"></i>
                         <h4 class="font-bold text-sm uppercase tracking-tight">Technical Empathy</h4>
@@ -265,8 +238,7 @@
                         Bridging the gap between design desire and legacy Outlook reality. Success was found by engineering for legacy constraints without sacrificing brand prestige.
                     </p>
                 </div>
-
-                <div class="content-card border-l-4 border-[#C1DD93]">
+                <div class="content-card border-l-4 border-[#C1DD93] hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-2 mb-3">
                         <i data-lucide="target" class="w-5 h-5 text-[#5658DF]"></i>
                         <h4 class="font-bold text-sm uppercase tracking-tight">Outcome vs. Output</h4>
@@ -275,8 +247,7 @@
                         The outcome was hours of human capacity returned to the FX team. Focusing on the "Hours Saved" KPI kept stakeholders aligned during timeline shifts.
                     </p>
                 </div>
-
-                <div class="content-card border-l-4 border-[#C1DD93]">
+                <div class="content-card border-l-4 border-[#C1DD93] hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-2 mb-3">
                         <i data-lucide="layers" class="w-5 h-5 text-[#5658DF]"></i>
                         <h4 class="font-bold text-sm uppercase tracking-tight">Phased De-risking</h4>
@@ -285,8 +256,7 @@
                         Separating the Super User launch from the GTM was vital. It allowed us to fix edge cases in a controlled environment before wide-scale adoption.
                     </p>
                 </div>
-
-                <div class="content-card border-l-4 border-[#C1DD93]">
+                <div class="content-card border-l-4 border-[#C1DD93] hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-2 mb-3">
                         <i data-lucide="refresh-cw" class="w-5 h-5 text-[#5658DF]"></i>
                         <h4 class="font-bold text-sm uppercase tracking-tight">Iterative Research</h4>
@@ -300,14 +270,14 @@
 
     </article>
 
-    <footer class="py-10 border-t border-slate-200" style="background-color: #5658DF;"> 
-        <div class="max-w-6xl mx-auto px-6 flex flex-col items-center">
-            <div class="flex flex-wrap justify-center gap-8 mb-6">
-                <a href="mailto:bizmesssyd@gmail.com" class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70" style="color: #FFFDD0; opacity: 0.9;">Contact</a>
-                <a href="Morgan_SchmidtResume.pdf" target="_blank" class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70" style="color: #FFFDD0; opacity: 0.9;">Resume</a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70" style="color: #FFFDD0; opacity: 0.9;">LinkedIn</a>
+    <footer class="py-16 px-6 bg-[#5658DF]"> 
+        <div class="max-w-4xl mx-auto flex flex-col items-center text-center">
+            <div class="flex flex-wrap justify-center gap-8 mb-8">
+                <a href="mailto:bizmesssyd@gmail.com" class="text-sm font-medium text-[#FFFDD0] opacity-90 hover:opacity-100 transition">Email</a>
+                <a href="Morgan_SchmidtResume.pdf" target="_blank" class="text-sm font-medium text-[#FFFDD0] opacity-90 hover:opacity-100 transition">Resume</a>
+                <a href="https://linkedin.com/in/morgan-schmidt" target="_blank" class="text-sm font-medium text-[#FFFDD0] opacity-90 hover:opacity-100 transition">LinkedIn</a>
             </div>
-            <p class="text-xs tracking-widest text-[#B2C3F9]">Designed & Coded by Morgan Schmidt &bull; 2026</p>
+            <p class="text-xs tracking-widest text-[#B2C3F9] font-bold uppercase">Designed & Coded by Morgan Schmidt &bull; 2026</p>
         </div>
     </footer>
 
