@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morgan Schmidt | Product Builder</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;1,300&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;1,300&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body class="bg-slate-50 text-slate-900">
@@ -14,81 +18,139 @@
     <nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
         <div class="flex items-center gap-1.5 group cursor-default">
             <span class="logo-text text-xl font-medium tracking-tight text-slate-900">morgan schmidt</span>
-            <span class="h-1.5 w-1.5 rounded-full opacity-80 group-hover:scale-125 transition-transform duration-300" style="background-color: #5658DF;"></span>
+            <span class="h-1.5 w-1.5 rounded-full opacity-80 group-hover:scale-125 transition-transform duration-300"
+                style="background-color: #5658DF;"></span>
         </div>
-    
+
         <div class="space-x-8 text-sm font-medium text-slate-500">
             <a href="#work" class="hover:text-[#5658DF] transition tracking-tight">Work</a>
             <a href="#about" class="hover:text-[#5658DF] transition tracking-tight">About</a>
-            <a href="Morgan_SchmidtResume.pdf" target="_blank" class="text-white px-5 py-2 rounded-full transition tracking-tight hover:opacity-90 shadow-sm" style="background-color: #5658DF;">Resume</a>
+            <a href="Morgan_SchmidtResume.pdf" target="_blank"
+                class="text-white px-5 py-2 rounded-full transition tracking-tight hover:opacity-90 shadow-sm"
+                style="background-color: #5658DF;">Resume</a>
         </div>
     </nav>
 
-    <header class="max-w-6xl mx-auto px-6 pt-32 pb-32">
+    <!-- <header class="max-w-6xl mx-auto px-6 pt-32 pb-32">
         <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="max-w-2xl">
                 <h1 class="text-6xl md:text-7xl font-extrabold mb-8">
                     ☺ Hi, I'm<br>
                     <span id="rotating-text" style="color: #5658DF;" class="transition-opacity duration-500"> モルガンです！</span>
                 </h1>
-                <p class="text-xl text-slate-600 leading-relaxed mb-6 tracking-tight font-normal">
-                    I'm Morgan, a Technical Product Consultant at 
-                    <span class="font-semibold text-slate-900 custom-underline">Telstra</span> 
-                    shaping products at the intersection of human-centered design and technical execution. 
-                    A graduate of <span class="font-bold text-slate-900">Design Computing at USYD</span>, 
-                    I've spent the last four years in Sydney leveraging a unique <span class="font-bold text-slate-900">Japanese-American upbringing</span>—blending 
-                    Eastern attention to craft and precision with Western strategic directness. 
-                    I bridge the gap between engineering, business, and UX by driving the product lifecycle through 
-                    <strong>Design Thinking</strong>, ensuring global perspectives are translated into shipped, user-centric solutions.
-                </p>
-                <p class="text-lg text-slate-400 leading-relaxed font-light italic tracking-tight">
-                    モーガンと申します。 
-                    <span class="font-semibold text-slate-900 custom-underline">Telstra</span> にてテクニカルプロダクトコンサルタントとして、 
-                    人間中心設計の考え方を基盤に、要件整理から設計、技術的な実行まで一貫したプロダクト開発に携わっています。 
-                    <span class="font-bold text-slate-900">シドニー大学（USYD）デザイン・コンピューティング学科</span>卒業後、 
-                    シドニーを拠点に4年以上、プロダクト開発およびデジタル領域の業務に従事してきました。 
-                    <span class="font-bold text-slate-900">日米のバックグラウンド</span>を活かし、 
-                    細部への配慮や品質を重視する視点と、目的志向での意思決定・実行力を両立させながら、 
-                    エンジニアリング、ビジネス、UXの間を調整・連携する役割を担っています。 
-                    <strong>デザイン思考</strong>を用いて、関係者間の共通理解を形成し、 
-                    グローバルな視点を持ちながらも、実運用に耐えるユーザー中心のプロダクトとして形にすることを重視しています。
-                </p>
+                <div>
+                    <p class="text-xl text-slate-600 leading-relaxed mb-6 tracking-tight font-normal">
+                        A <span class="font-semibold text-slate-900 custom-underline">Telstra</span> Technical Product Consultant born and raised in Tokyo, I moved to Sydney four years ago to pursue my <span class="font-bold text-slate-900">Bachelor of Design Computing at USYD</span>. 
+                        I bridge the gap between engineering, business, and UX—blending Japanese attention to detail with Western strategic directness to drive the product lifecycle and ship user-centric global solutions.
+                    </p>
+                    
+                    <p class="text-lg text-slate-400 leading-relaxed font-light italic tracking-tight color [#C1DD93]">
+                        <span class="font-semibold text-slate-600 custom-underline">オーストラリア最大の通信会社Telstra</span> にて、テクニカルプロダクトコンサルタントとして活動中。
+                        東京出身。4年前に渡豪し、<span class="font-bold text-slate-600">シドニー大学 (USYD) でUX/UI、エンジニアリング、ビジネス</span>を横断的に習得しました。
+                        日本ならではの細部へのこだわりと、欧米の戦略的なマインドセットを融合。デザイン思考を武器に、ビジネス・エンジニアリング・UXの架け橋としてプロダクト開発をリードしています。
+                    </p>
+                </div>
             </div>
             <div class="flex-1 w-full max-w-sm md:max-w-md">
                 <img src="profile.jpg" alt="Morgan Schmidt Illustration" class="w-full h-auto object-contain">
             </div>
         </div>
+    </header> -->
+
+    <header class="max-w-6xl mx-auto px-6 pt-32 pb-32" x-data="{ lang: 'en' }">
+
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="max-w-2xl">
+                <h1 class="text-6xl md:text-7xl font-extrabold mb-8">
+                    ☺ Hi, I'm<br>
+                    <span id="rotating-text" style="color: #5658DF;" class="transition-opacity duration-500">
+                        モルガンです！</span>
+                </h1>
+
+                <div class="transition-all duration-500">
+                    <div x-show="lang === 'en'">
+                        <p class="text-xl text-slate-600 leading-relaxed mb-6 tracking-tight font-normal">
+                            A <span class="font-semibold text-slate-900 custom-underline">Telstra</span> Technical
+                            Product Consultant born and raised in Tokyo, I moved to Sydney four years ago to pursue my
+                            <span class="font-bold text-slate-900">Bachelor of Design Computing at USYD</span>.
+                            I bridge the gap between engineering, business, and UX—blending Japanese attention to detail
+                            with Western strategic directness to drive the product lifecycle and ship user-centric
+                            global solutions.
+                        </p>
+                    </div>
+
+                    <div x-show="lang === 'jp'">
+                        <p class="text-xl text-slate-600 leading-relaxed mb-6 tracking-tight font-normal">
+                            <span class="font-semibold text-slate-900 custom-underline">オーストラリア最大の通信会社Telstra</span>
+                            にて、テクニカルプロダクトコンサルタントとして活動中。
+                            東京出身。4年前に渡豪し、<span class="font-bold text-slate-900">シドニー大学 (USYD)
+                                でUX/UI、エンジニアリング、ビジネス</span>を横断的に習得しました。
+                            日本ならではの細部へのこだわりと、欧米の戦略的なマインドセットを融合。デザイン思考を武器に、ビジネス・エンジニアリング・UXの架け橋としてプロダクト開発をリードしています。
+
+                        </p>
+                    </div>
+                </div>
+                <div class="flex justify-start mb-8">
+                    <div class="flex items-center bg-white border-2 border-[#B2C3F9] p-1 rounded-full shadow-sm">
+                        <button @click="lang = 'en'"
+                            :class="lang === 'en' ? 'bg-[#5658DF] text-white shadow-md' : 'text-[#5658DF]'"
+                            class="px-4 py-1.5 rounded-full text-[11px] font-black tracking-widest transition-all duration-300">
+                            EN
+                        </button>
+                        <button @click="lang = 'jp'"
+                            :class="lang === 'jp' ? 'bg-[#5658DF] text-white shadow-md' : 'text-[#5658DF]'"
+                            class="px-4 py-1.5 rounded-full text-[11px] font-black tracking-widest transition-all duration-300">
+                            JP
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-1 w-full max-w-sm md:max-w-md">
+                <img src="profile.jpg" alt="Morgan Schmidt" class="w-full h-auto object-contain">
+            </div>
+        </div>
     </header>
 
-    <div style="background-color: #C1DD93;"> 
-        <main id="work" class="max-w-6xl mx-auto px-6 py-20"> 
+    <div style="background-color: #C1DD93;">
+        <main id="work" class="max-w-6xl mx-auto px-6 py-20">
             <h2 class="section-label text-xs mb-12" style="color: #5658DF;">Selected Projects</h2>
-            
+
             <div class="flex flex-col items-center gap-8">
-                
+
                 <div class="w-full bg-white border border-slate-200 p-8 md:p-12 rounded-3xl bento-card shadow-sm group">
                     <div class="grid md:grid-cols-2 gap-12 items-center">
-                        <div class="overflow-hidden rounded-2xl bg-slate-100 aspect-video md:aspect-square lg:aspect-video order-1 md:order-1">
-                            <img src="engagementPortalMockup.png" alt="Telstra Marketing Engine" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div
+                            class="overflow-hidden rounded-2xl bg-slate-100 aspect-video md:aspect-square lg:aspect-video order-1 md:order-1">
+                            <img src="engagementPortalMockup.png" alt="Telstra Marketing Engine"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         </div>
                         <div class="order-2 md:order-2">
                             <div class="flex justify-between items-start mb-8">
-                                <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;">B2B SaaS / Automation</span>
+                                <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold"
+                                    style="background-color: #C1DD93; color: #5658DF;">B2B SaaS / Automation</span>
                                 <a href="TelstraApp.html" class="group/link block">
-                                    <span class="text-sm font-medium text-slate-400 transition-all duration-300 tracking-tight case-study-text group-hover/link:text-[#5658DF] group-hover/link:translate-x-1 inline-flex items-center">
+                                    <span
+                                        class="text-sm font-medium text-slate-400 transition-all duration-300 tracking-tight case-study-text group-hover/link:text-[#5658DF] group-hover/link:translate-x-1 inline-flex items-center">
                                         View Case Study →
                                     </span>
-                                </a>                            
+                                </a>
                             </div>
                             <h3 class="text-3xl font-bold mb-3 text-slate-900">Telstra Marketing Engine</h3>
                             <p class="text-base text-slate-600 mb-8 leading-relaxed tracking-tight">
-                                Transformed a manual campaign distribution process into a seamless internal product. 
+                                Transformed a manual campaign distribution process into a seamless internal product.
                                 Reduced time-to-market by 25% through Power Platform orchestration.
                             </p>
                             <div class="flex gap-8">
-                                <div class="text-left"><div class="stat-value text-2xl font-bold text-slate-900">20hr+</div><div class="text-[10px] section-label text-slate-400">Weekly Savings</div></div>
+                                <div class="text-left">
+                                    <div class="stat-value text-2xl font-bold text-slate-900">20hr+</div>
+                                    <div class="text-[10px] section-label text-slate-400">Weekly Savings</div>
+                                </div>
                                 <div class="w-px h-10 bg-slate-200"></div>
-                                <div class="text-left"><div class="stat-value text-2xl font-bold text-slate-900">100%</div><div class="text-[10px] section-label text-slate-400">Team Adoption</div></div>
+                                <div class="text-left">
+                                    <div class="stat-value text-2xl font-bold text-slate-900">100%</div>
+                                    <div class="text-[10px] section-label text-slate-400">Team Adoption</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -96,25 +158,37 @@
 
                 <div class="w-full bg-white border border-slate-200 p-8 md:p-12 rounded-3xl bento-card shadow-sm group">
                     <div class="grid md:grid-cols-2 gap-12 items-center">
-                        <div class="overflow-hidden rounded-2xl bg-slate-100 aspect-video md:aspect-square lg:aspect-video">
-                            <img src="DataVis.png" alt="Data Visualisation" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div
+                            class="overflow-hidden rounded-2xl bg-slate-100 aspect-video md:aspect-square lg:aspect-video">
+                            <img src="DataVis.png" alt="Data Visualisation"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         </div>
                         <div>
                             <div class="flex justify-between items-start mb-8">
-                                <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;">Data Visualisation</span>
+                                <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold"
+                                    style="background-color: #C1DD93; color: #5658DF;">Data Visualisation</span>
                                 <a href="SecondhandDataVis.html" class="group/link block">
-                                    <span class="text-sm font-medium text-slate-400 transition-all duration-300 tracking-tight case-study-text group-hover/link:text-[#5658DF] group-hover/link:translate-x-1 inline-flex items-center">
+                                    <span
+                                        class="text-sm font-medium text-slate-400 transition-all duration-300 tracking-tight case-study-text group-hover/link:text-[#5658DF] group-hover/link:translate-x-1 inline-flex items-center">
                                         View Case Study →
                                     </span>
-                                </a>                              </div>
+                                </a>
+                            </div>
                             <h3 class="text-3xl font-bold mb-3 text-slate-900">Secondhand Market Insights</h3>
                             <p class="text-base text-slate-600 mb-8 leading-relaxed tracking-tight">
-                                A data-driven deep dive into sustainable fashion. Communicating complex market trends through interactive visualization.
+                                A data-driven deep dive into sustainable fashion. Communicating complex market trends
+                                through interactive visualization.
                             </p>
                             <div class="flex gap-8">
-                                <div class="text-left"><div class="stat-value text-2xl font-bold text-slate-900">Insight</div><div class="text-[10px] section-label text-slate-400">Driven Design</div></div>
+                                <div class="text-left">
+                                    <div class="stat-value text-2xl font-bold text-slate-900">Insight</div>
+                                    <div class="text-[10px] section-label text-slate-400">Driven Design</div>
+                                </div>
                                 <div class="w-px h-10 bg-slate-200"></div>
-                                <div class="text-left"><div class="stat-value text-2xl font-bold text-slate-900">Data</div><div class="text-[10px] section-label text-slate-400">Visualized</div></div>
+                                <div class="text-left">
+                                    <div class="stat-value text-2xl font-bold text-slate-900">Data</div>
+                                    <div class="text-[10px] section-label text-slate-400">Visualized</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -122,27 +196,41 @@
 
                 <div class="w-full bg-white border border-slate-200 p-8 md:p-12 rounded-3xl bento-card shadow-sm group">
                     <div class="grid md:grid-cols-2 gap-12 items-center">
-                        <div class="relative w-full aspect-video md:aspect-square lg:aspect-video rounded-[32px] flex items-center justify-center overflow-hidden">
-                            <div class="overflow-hidden rounded-2xl bg-slate-100 aspect-video md:aspect-square lg:aspect-video order-1 md:order-1">
-                                <img src="terasu_header.png" alt="Telstra Marketing Engine" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div
+                            class="relative w-full aspect-video md:aspect-square lg:aspect-video rounded-[32px] flex items-center justify-center overflow-hidden">
+                            <div
+                                class="overflow-hidden rounded-2xl bg-slate-100 aspect-video md:aspect-square lg:aspect-video order-1 md:order-1">
+                                <img src="terasu_header.png" alt="Telstra Marketing Engine"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between items-start mb-8">
-                                <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;">Product Strategy & UX Research</span>
+                                <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold"
+                                    style="background-color: #C1DD93; color: #5658DF;">Product Strategy & UX
+                                    Research</span>
                                 <a href="Terasu.html" class="group/link block">
-                                    <span class="text-sm font-medium text-slate-400 transition-all duration-300 tracking-tight case-study-text group-hover/link:text-[#5658DF] group-hover/link:translate-x-1 inline-flex items-center">
+                                    <span
+                                        class="text-sm font-medium text-slate-400 transition-all duration-300 tracking-tight case-study-text group-hover/link:text-[#5658DF] group-hover/link:translate-x-1 inline-flex items-center">
                                         View Case Study →
                                     </span>
-                                </a>                              </div>
+                                </a>
+                            </div>
                             <h3 class="text-3xl font-bold mb-3 text-slate-900">Terasu: A solution to job security</h3>
                             <p class="text-base text-slate-600 mb-8 leading-relaxed tracking-tight">
-                                A design-led approach to career starters navigating job security. Focused on UX research and prototyping.
+                                A design-led approach to career starters navigating job security. Focused on UX research
+                                and prototyping.
                             </p>
                             <div class="flex gap-8">
-                                <div class="text-left"><div class="stat-value text-2xl font-bold text-slate-900">UX</div><div class="text-[10px] section-label text-slate-400">Research</div></div>
+                                <div class="text-left">
+                                    <div class="stat-value text-2xl font-bold text-slate-900">UX</div>
+                                    <div class="text-[10px] section-label text-slate-400">Research</div>
+                                </div>
                                 <div class="w-px h-10 bg-slate-200"></div>
-                                <div class="text-left"><div class="stat-value text-2xl font-bold text-slate-900">MVP</div><div class="text-[10px] section-label text-slate-400">Development</div></div>
+                                <div class="text-left">
+                                    <div class="stat-value text-2xl font-bold text-slate-900">MVP</div>
+                                    <div class="text-[10px] section-label text-slate-400">Development</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -151,58 +239,95 @@
         </main>
     </div>
 
-    <section id="about" class="max-w-6xl mx-auto px-6 py-32 border-t border-slate-100 bg-slate-50">
-        <h2 class="section-label text-xs text-slate-400 mb-12">About Me</h2>
+    <section id="about" class="max-w-6xl mx-auto px-6 py-32 border-t border-slate-100 bg-slate-50"
+        x-data="{ lang: 'en' }">
+        <div class="flex justify-between items-end mb-12">
+            <h2 class="section-label text-xs text-slate-400">About Me</h2>
+
+            <div
+                class="flex items-center bg-slate-200/50 p-1 rounded-full text-[10px] font-bold tracking-widest uppercase">
+                <button @click="lang = 'en'"
+                    :class="lang === 'en' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-400'"
+                    class="px-3 py-1 rounded-full transition-all duration-300">EN</button>
+                <button @click="lang = 'jp'"
+                    :class="lang === 'jp' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-400'"
+                    class="px-3 py-1 rounded-full transition-all duration-300">JP</button>
+            </div>
+        </div>
+
         <div class="grid md:grid-cols-2 gap-16 items-center">
             <div class="space-y-12">
                 <div>
-                    <h3 class="text-3xl font-bold mb-4 text-slate-900 tracking-tight">From Tokyo to Sydney 🌏</h3>
-                    <p class="text-lg text-slate-600 leading-relaxed tracking-tight">
-                        I'm a Japanese-American Tech Consultant at Telstra. With a background in Design Computing from the University of Sydney, I focus on turning complex technical requirements into intuitive human experiences. My upbringing in international schools shaped my approach to problem-solving: with <strong>empathy and global understanding.</strong>
+                    <h3 class="text-3xl font-bold mb-4 text-slate-900 tracking-tight"
+                        x-text="lang === 'en' ? 'From Tokyo to Sydney 🌏' : '東京からシドニーへ 🌏'"></h3>
+
+                    <p x-show="lang === 'en'" class="text-xl text-slate-600 leading-relaxed tracking-tight font-normal">
+                        My love for design started early, rooted in a multicultural upbringing. Growing up in Japan and
+                        attending international
+                        schools meant being constantly surrounded by diverse cultures, religions, and perspectives. This
+                        exposure deeply shaped
+                        how I understand people—enabling me to solve complex technical problems with a foundation of
+                        <span class="font-semibold text-slate-900 custom-underline">
+                            genuine empathy,
+                        interest, and global understanding.</span>
+                    </p>
+
+                    <p x-show="lang === 'jp'"
+                        class="text-lg text-slate-400 leading-relaxed font-light italic tracking-tight" x-cloak>
+                        デザインへの情熱は、多文化な環境で育った幼少期にさかのぼります。日本で育ち、インターナショナルスクールで多様な文化や価値観に囲まれて過ごした経験が、私の人間理解の根幹を形作っています。この背景があるからこそ、単なる技術課題の解決に留まらず、対象への
+                        <span class="font-semibold text-slate-900 custom-underline">
+                            深い共感、好奇心、そしてグローバルな視点,</span>を持ってプロダクトに向き合うことができます。
                     </p>
                 </div>
+
                 <div>
-                    <h3 class="text-3xl font-bold mb-4 text-slate-900 tracking-tight">Experience & Toolkit 🛠️</h3>
-                    <p class="text-lg text-slate-600 leading-relaxed tracking-tight mb-6">
-                        My journey across digital marketing, UX/UI, and sales has built a toolkit focused on technical precision. When I'm offline, you'll find me on the field hockey pitch or hunting for the best matcha in Sydney. 🍵
+                    <h3 class="text-3xl font-bold mb-4 text-slate-900 tracking-tight"
+                        x-text="lang === 'en' ? 'Experience & Toolkit 🛠️' : 'スキルとツールキット 🛠️'"></h3>
+                    <p class="text-lg text-slate-600 leading-relaxed tracking-tight mb-6"
+                        x-text="lang === 'en' ? 'My journey across digital marketing, sales, and product development has built a toolkit focused on technical precision. In my free time, you’ll find me on the hockey pitch or hunting for Sydney’s best matcha. 🍵' : 'デジタルマーケティング、プロダクト立案・開発からUX/UI設計まで、幅広い経験を通じて技術的な知見を深めてきました。休日は、フィールドホッケーを楽しんだり、シドニー屈指の抹茶探しに巡っています🍵'">
                     </p>
+
                     <div class="flex flex-wrap gap-2">
-                        <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;">Product Development</span>
-                        <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;">Front-end Dev</span>
-                        <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;">Product Strategy</span>
+                        <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold"
+                            style="background-color: #C1DD93; color: #5658DF;">Product Development</span>
+                        <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold"
+                            style="background-color: #C1DD93; color: #5658DF;">Front-end Dev</span>
+                        <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold"
+                            style="background-color: #C1DD93; color: #5658DF;">Product Strategy</span>
                     </div>
                 </div>
             </div>
-            
+
             <div class="w-full">
-                <img src="grad.jpg" alt="Graduation at USYD" class="w-full object-cover hover:scale-[1.25] hover:-rotate-1 transition-all  duration-500 cursor-pointer">
+                <img src="grad.jpg" alt="Graduation at USYD"
+                    class="w-full object-cover hover:scale-[1.25] hover:-rotate-1 transition-all  duration-500 cursor-pointer">
             </div>
         </div>
     </section>
-    
-    <footer class="py-10 border-t border-slate-200" style="background-color: #5658DF;"> 
+
+    <footer class="py-10 border-t border-slate-200" style="background-color: #5658DF;">
         <div class="max-w-6xl mx-auto px-6 flex flex-col items-center">
-            
+
             <div class="flex flex-wrap justify-center gap-8 mb-6">
-                <a href="mailto:bizmesssyd@gmail.com" 
-                   class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70" 
-                   style="color: #FFFDD0; opacity: 0.9;">
-                   Contact
+                <a href="mailto:bizmesssyd@gmail.com"
+                    class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70"
+                    style="color: #FFFDD0; opacity: 0.9;">
+                    Contact
                 </a>
-    
-                <a href="Morgan_SchmidtResume.pdf" target="_blank" 
-                   class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70" 
-                   style="color: #FFFDD0;  opacity: 0.9;">
-                   Resume
+
+                <a href="Morgan_SchmidtResume.pdf" target="_blank"
+                    class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70"
+                    style="color: #FFFDD0;  opacity: 0.9;">
+                    Resume
                 </a>
-    
-                <a href="https://linkedin.com/in/yourusername" target="_blank" 
-                   class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70" 
-                   style="color: #FFFDD0;  opacity: 0.9;">
-                   LinkedIn
+
+                <a href="https://linkedin.com/in/yourusername" target="_blank"
+                    class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70"
+                    style="color: #FFFDD0;  opacity: 0.9;">
+                    LinkedIn
                 </a>
             </div>
-    
+
             <p class="text-xs tracking-widest " style="color: #B2C3F9;">
                 Designed & Coded by Morgan Schmidt ☺ 2026
             </p>
@@ -212,4 +337,5 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
