@@ -17,33 +17,33 @@
     </style>
 </head>
 
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-50 text-slate-900" x-data="{ lang: 'en', mobileMenu: false }">
 
-    <nav class="max-w-6xl mx-auto px-6 py-6 md:py-8 flex justify-between items-center relative" x-data="{ mobileMenu: false }">
+    <nav class="max-w-6xl mx-auto px-6 py-6 md:py-8 flex justify-between items-center relative">
         <div class="flex items-center gap-1.5 group cursor-default z-30">
             <span class="logo-text text-lg md:text-xl font-medium tracking-tight text-slate-900">morgan schmidt</span>
             <span class="h-1.5 w-1.5 rounded-full opacity-80 group-hover:scale-125 transition-transform duration-300" style="background-color: #5658DF;"></span>
         </div>
 
         <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-500">
-            <a href="#work" class="hover:text-[#5658DF] transition tracking-tight">Work</a>
-            <a href="#about" class="hover:text-[#5658DF] transition tracking-tight">About</a>
-            <a href="Morgan_SchmidtResume.pdf" target="_blank" class="text-white px-5 py-2 rounded-full transition tracking-tight hover:opacity-90 shadow-sm" style="background-color: #5658DF;">Resume</a>
+            <a href="#work" class="hover:text-[#5658DF] transition tracking-tight" x-text="lang === 'en' ? 'Work' : '実績'">Work</a>
+            <a href="#about" class="hover:text-[#5658DF] transition tracking-tight" x-text="lang === 'en' ? 'About' : '自己紹介'">About</a>
+            <a href="MorganSchmidtResume.pdf" target="_blank" class="text-white px-5 py-2 rounded-full transition tracking-tight hover:opacity-90 shadow-sm" style="background-color: #5658DF;" x-text="lang === 'en' ? 'Resume' : '履歴書'">Resume</a>
         </div>
 
         <button @click="mobileMenu = !mobileMenu" class="md:hidden z-30 p-2 text-slate-900">
-            <svg x-show="!mobileMenu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-            <svg x-show="mobileMenu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            <svg x-show="!mobileMenu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            <svg x-show="mobileMenu" x-cloak xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
         </button>
 
         <div x-show="mobileMenu" x-transition x-cloak class="fixed inset-0 bg-white z-20 flex flex-col items-center justify-center space-y-8 text-xl font-bold md:hidden">
-            <a href="#work" @click="mobileMenu = false" class="hover:text-[#5658DF]">Work</a>
-            <a href="#about" @click="mobileMenu = false" class="hover:text-[#5658DF]">About</a>
-            <a href="Morgan_SchmidtResume.pdf" class="text-white px-8 py-3 rounded-full" style="background-color: #5658DF;">Resume</a>
+            <a href="#work" @click="mobileMenu = false" x-text="lang === 'en' ? 'Work' : '実績'">Work</a>
+            <a href="#about" @click="mobileMenu = false" x-text="lang === 'en' ? 'About' : '自己紹介'">About</a>
+            <a href="MorganSchmidtResume.pdf" target="_blank" class="text-white px-8 py-3 rounded-full" style="background-color: #5658DF;" x-text="lang === 'en' ? 'Resume' : '履歴書'">Resume</a>
         </div>
     </nav>
 
-    <header class="max-w-6xl mx-auto px-6 pt-16 md:pt-32 pb-16 md:pb-32" x-data="{ lang: 'en' }">
+    <header class="max-w-6xl mx-auto px-6 pt-16 md:pt-32 pb-16 md:pb-32">
         <div class="flex flex-col md:flex-row items-center gap-12 text-left">
             <div class="max-w-2xl">
                 <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-[1.1]">
@@ -85,145 +85,149 @@
 
     <div style="background-color: #C1DD93;">
         <main id="work" class="max-w-6xl mx-auto px-6 py-16 md:py-20">
-            <h2 class="section-label text-xs mb-12" style="color: #5658DF;">Selected Projects</h2>
+            <h2 class="section-label text-xs mb-12" style="color: #5658DF;" x-text="lang === 'en' ? 'Selected Projects' : '主なプロジェクト'">Selected Projects</h2>
 
             <div class="flex flex-col items-center gap-8">
-                <div class="w-full bg-white border border-slate-200 p-6 md:p-12 rounded-3xl shadow-sm group">
+                
+                <a href="TelstraApp.html" class="w-full bg-white border border-slate-200 p-6 md:p-12 rounded-3xl shadow-sm group block transition-all duration-200 hover:shadow-2xl hover:-translate-y-1 active:scale-[0.98] active:bg-slate-50 cursor-pointer">
                     <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                         <div class="overflow-hidden rounded-2xl bg-slate-100 aspect-video md:aspect-square lg:aspect-video order-1">
-                            <img src="engagementPortalMockup.png" alt="Telstra Marketing Engine" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <img src="engagementPortalMockup.png" alt="Telstra" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         </div>
                         <div class="order-2">
                             <div class="flex flex-row justify-between items-center gap-2 mb-6 md:mb-8">
-                                <span class="text-[9px] sm:text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;">B2B SaaS / Automation</span>
-                                <a href="TelstraApp.html" class="group/link block shrink-0">
-                                    <span class="text-[12px] sm:text-sm font-medium text-slate-400 transition-all duration-300 tracking-tight group-hover/link:text-[#5658DF] group-hover/link:translate-x-1 inline-flex items-center">
-                                        View Case Study →
+                                <span class="text-[9px] sm:text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;" x-text="lang === 'en' ? 'B2B SaaS / Automation' : 'B2B SaaS / 自動化'">B2B SaaS / Automation</span>
+                                <div class="shrink-0">
+                                    <span class="text-[12px] sm:text-sm font-bold text-slate-400 transition-all duration-300 tracking-tight group-hover:text-[#5658DF] group-hover:bg-[#5658DF]/5 py-1 px-3 rounded-lg inline-flex items-center gap-1">
+                                        <span x-text="lang === 'en' ? 'View Case Study' : '詳細を見る'">View Case Study</span>
+                                        <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
                                     </span>
-                                </a>
+                                </div>
                             </div>
-                            <h3 class="text-2xl md:text-3xl font-bold mb-3 text-slate-900">Telstra Marketing Engine</h3>
-                            <p class="text-sm md:text-base text-slate-600 mb-8 leading-relaxed tracking-tight">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-3 text-slate-900" x-text="lang === 'en' ? 'Telstra Marketing App' : 'Telstraマーケティングアプリ'">Telstra Marketing App</h3>
+                            <p class="text-sm md:text-base text-slate-600 mb-8 leading-relaxed tracking-tight" x-text="lang === 'en' ? 'Transformed a manual campaign distribution process into a seamless internal product. Reduced time-to-market by 25% through Power Platform orchestration.' : '手動のキャンペーン配信プロセスをシームレスな社内プロダクトへと刷新。Power Platformの活用により市場投入までの時間を25%短縮しました。'">
                                 Transformed a manual campaign distribution process into a seamless internal product. Reduced time-to-market by 25% through Power Platform orchestration.
                             </p>
                             <div class="flex gap-8">
                                 <div>
                                     <div class="text-xl md:text-2xl font-bold text-slate-900">20hr+</div>
-                                    <div class="text-[10px] section-label text-slate-400">Weekly Savings</div>
+                                    <div class="text-[10px] section-label text-slate-400" x-text="lang === 'en' ? 'Weekly Savings' : '週の削減時間'">Weekly Savings</div>
                                 </div>
                                 <div class="w-px h-10 bg-slate-200"></div>
                                 <div>
                                     <div class="text-xl md:text-2xl font-bold text-slate-900">100%</div>
-                                    <div class="text-[10px] section-label text-slate-400">Team Adoption</div>
+                                    <div class="text-[10px] section-label text-slate-400" x-text="lang === 'en' ? 'Team Adoption' : 'チーム導入率'">Team Adoption</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="w-full bg-white border border-slate-200 p-6 md:p-12 rounded-3xl shadow-sm group">
+                <a href="SecondhandDataVis.html" class="w-full bg-white border border-slate-200 p-6 md:p-12 rounded-3xl shadow-sm group block transition-all duration-200 hover:shadow-2xl hover:-translate-y-1 active:scale-[0.98] active:bg-slate-50 cursor-pointer">
                     <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                         <div class="overflow-hidden rounded-2xl bg-slate-100 aspect-video md:aspect-square lg:aspect-video order-1">
                             <img src="DataVis.png" alt="Data Visualisation" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         </div>
                         <div class="order-2">
                             <div class="flex flex-row justify-between items-center gap-2 mb-6 md:mb-8">
-                                <span class="text-[9px] sm:text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;">Data Visualisation</span>
-                                <a href="SecondhandDataVis.html" class="group/link block shrink-0">
-                                    <span class="text-[12px] sm:text-sm font-medium text-slate-400 transition-all duration-300 tracking-tight group-hover/link:text-[#5658DF] group-hover/link:translate-x-1 inline-flex items-center">
-                                        View Case Study →
+                                <span class="text-[9px] sm:text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;" x-text="lang === 'en' ? 'Data Visualisation' : 'データ視覚化'">Data Visualisation</span>
+                                <div class="shrink-0">
+                                    <span class="text-[12px] sm:text-sm font-bold text-slate-400 transition-all duration-300 tracking-tight group-hover:text-[#5658DF] group-hover:bg-[#5658DF]/5 py-1 px-3 rounded-lg inline-flex items-center gap-1">
+                                        <span x-text="lang === 'en' ? 'View Case Study' : '詳細を見る'">View Case Study</span>
+                                        <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
                                     </span>
-                                </a>
+                                </div>
                             </div>
-                            <h3 class="text-2xl md:text-3xl font-bold mb-3 text-slate-900">Secondhand Market Insights</h3>
-                            <p class="text-sm md:text-base text-slate-600 mb-8 leading-relaxed tracking-tight">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-3 text-slate-900" x-text="lang === 'en' ? 'Secondhand Market Insights' : '中古市場のインサイト'">Secondhand Market Insights</h3>
+                            <p class="text-sm md:text-base text-slate-600 mb-8 leading-relaxed tracking-tight" x-text="lang === 'en' ? 'A data-driven deep dive into sustainable fashion. Communicating complex market trends through interactive visualization.' : 'サステナブルファッションに関するデータ分析。インタラクティブな視覚化を通じて、複雑な市場トレンドを明快に表現しました。'">
                                 A data-driven deep dive into sustainable fashion. Communicating complex market trends through interactive visualization.
                             </p>
                             <div class="flex gap-8">
                                 <div>
-                                    <div class="text-xl md:text-2xl font-bold text-slate-900">Insight</div>
-                                    <div class="text-[10px] section-label text-slate-400">Driven Design</div>
+                                    <div class="text-xl md:text-2xl font-bold text-slate-900" x-text="lang === 'en' ? 'Insight' : 'インサイト'">Insight</div>
+                                    <div class="text-[10px] section-label text-slate-400" x-text="lang === 'en' ? 'Driven Design' : '重視のデザイン'">Driven Design</div>
                                 </div>
                                 <div class="w-px h-10 bg-slate-200"></div>
                                 <div>
-                                    <div class="text-xl md:text-2xl font-bold text-slate-900">Data</div>
-                                    <div class="text-[10px] section-label text-slate-400">Visualized</div>
+                                    <div class="text-xl md:text-2xl font-bold text-slate-900" x-text="lang === 'en' ? 'Data' : 'データ'">Data</div>
+                                    <div class="text-[10px] section-label text-slate-400" x-text="lang === 'en' ? 'Visualized' : '視覚化'">Visualized</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="w-full bg-white border border-slate-200 p-6 md:p-12 rounded-3xl shadow-sm group">
+                <a href="Terasu.html" class="w-full bg-white border border-slate-200 p-6 md:p-12 rounded-3xl shadow-sm group block transition-all duration-200 hover:shadow-2xl hover:-translate-y-1 active:scale-[0.98] active:bg-slate-50 cursor-pointer">
                     <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                         <div class="overflow-hidden rounded-2xl bg-slate-100 aspect-video md:aspect-square lg:aspect-video order-1">
                             <img src="terasu_header.png" alt="Terasu" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         </div>
                         <div class="order-2">
                             <div class="flex flex-row justify-between items-center gap-2 mb-6 md:mb-8">
-                                <span class="text-[9px] sm:text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;">Product Strategy & UX</span>
-                                <a href="Terasu.html" class="group/link block shrink-0">
-                                    <span class="text-[12px] sm:text-sm font-medium text-slate-400 transition-all duration-300 tracking-tight group-hover/link:text-[#5658DF] group-hover/link:translate-x-1 inline-flex items-center">
-                                        View Case Study →
+                                <span class="text-[9px] sm:text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;" x-text="lang === 'en' ? 'Product Strategy & UX' : '戦略 ＆ UXリサーチ'">Product Strategy & UX</span>
+                                <div class="shrink-0">
+                                    <span class="text-[12px] sm:text-sm font-bold text-slate-400 transition-all duration-300 tracking-tight group-hover:text-[#5658DF] group-hover:bg-[#5658DF]/5 py-1 px-3 rounded-lg inline-flex items-center gap-1">
+                                        <span x-text="lang === 'en' ? 'View Case Study' : '詳細を見る'">View Case Study</span>
+                                        <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
                                     </span>
-                                </a>
+                                </div>
                             </div>
-                            <h3 class="text-2xl md:text-3xl font-bold mb-3 text-slate-900">Terasu: A solution to job security</h3>
-                            <p class="text-sm md:text-base text-slate-600 mb-8 leading-relaxed tracking-tight">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-3 text-slate-900" x-text="lang === 'en' ? 'Terasu: Job Security' : 'Terasu: 雇用不安への解決策'">Terasu: A solution to job security</h3>
+                            <p class="text-sm md:text-base text-slate-600 mb-8 leading-relaxed tracking-tight" x-text="lang === 'en' ? 'A design-led approach to career starters navigating job security. Focused on UX research and prototyping.' : 'キャリア初期の層が直面する雇用不安に対し、デザイン主導のアプローチで挑んだプロジェクト。リサーチからプロトタイプ開発までを担当。'">
                                 A design-led approach to career starters navigating job security. Focused on UX research and prototyping.
                             </p>
                             <div class="flex gap-8">
                                 <div>
-                                    <div class="text-xl md:text-2xl font-bold text-slate-900">UX</div>
-                                    <div class="text-[10px] section-label text-slate-400">Research</div>
+                                    <div class="text-xl md:text-2xl font-bold text-slate-900" x-text="lang === 'en' ? 'UX' : 'UX'">UX</div>
+                                    <div class="text-[10px] section-label text-slate-400" x-text="lang === 'en' ? 'Research' : 'リサーチ'">Research</div>
                                 </div>
                                 <div class="w-px h-10 bg-slate-200"></div>
                                 <div>
-                                    <div class="text-xl md:text-2xl font-bold text-slate-900">MVP</div>
-                                    <div class="text-[10px] section-label text-slate-400">Development</div>
+                                    <div class="text-xl md:text-2xl font-bold text-slate-900" x-text="lang === 'en' ? 'MVP' : 'MVP'">MVP</div>
+                                    <div class="text-[10px] section-label text-slate-400" x-text="lang === 'en' ? 'Development' : '開発'">Development</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
+
             </div>
         </main>
     </div>
-
-    <section id="about" class="max-w-6xl mx-auto px-6 py-20 md:py-32 border-t border-slate-100 bg-slate-50" x-data="{ lang: 'en' }">
+    <section id="about" class="max-w-6xl mx-auto px-6 py-20 md:py-32 border-t border-slate-100 bg-slate-50">
         <div class="flex justify-between items-end mb-12">
-            <h2 class="section-label text-xs text-slate-400">About Me</h2>
-            <div class="flex items-center bg-slate-200/50 p-1 rounded-full text-[10px] font-bold tracking-widest uppercase">
-                <button @click="lang = 'en'" :class="lang === 'en' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-400'" class="px-3 py-1 rounded-full transition-all duration-300">EN</button>
-                <button @click="lang = 'jp'" :class="lang === 'jp' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-400'" class="px-3 py-1 rounded-full transition-all duration-300">JP</button>
-            </div>
+            <h2 class="section-label text-xs text-slate-400" x-text="lang === 'en' ? 'About Me' : '私について'">About Me</h2>
         </div>
 
         <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
             <div class="space-y-12 order-2 md:order-1">
                 <div class="text-left">
                     <h3 class="text-2xl md:text-3xl font-bold mb-4 text-slate-900 tracking-tight" x-text="lang === 'en' ? 'From Tokyo to Sydney 🌏' : '東京からシドニーへ 🌏'"></h3>
-                    <p x-show="lang === 'en'" x-transition class="text-lg md:text-xl text-slate-600 leading-relaxed tracking-tight font-normal">
-                        My love for design started early, rooted in a multicultural upbringing. Growing up in Japan and attending international schools meant being constantly surrounded by diverse cultures, religions, and perspectives. This exposure deeply shaped how I understand people—enabling me to solve complex technical problems with a foundation of <span class="font-semibold text-slate-900 custom-underline">genuine empathy, interest, and global understanding.</span>
-                    </p>
-                    <p x-show="lang === 'jp'" x-transition x-cloak class="text-lg text-slate-500 leading-relaxed font-light italic tracking-tight">
-                        デザインへの情熱は、多文化な環境で育った幼少期にさかのぼります。日本で育ち、インターナショナルスクールで多様な文化や価値観に囲まれて過ごした経験が、私の人間理解の根幹を形作っています。この背景があるからこそ、単なる技術課題の解決に留まらず、対象への <span class="font-semibold text-slate-900 custom-underline">深い共感、好奇心、そしてグローバルな視点</span>を持ってプロダクトに向き合うことができます。
-                    </p>
+                    <div x-show="lang === 'en'" x-transition>
+                        <p class="text-lg md:text-xl text-slate-600 leading-relaxed tracking-tight font-normal">
+                            My love for design started early, rooted in a multicultural upbringing. Growing up in Japan and attending international schools meant being constantly surrounded by diverse cultures, religions, and perspectives. This exposure deeply shaped how I understand people—enabling me to solve complex technical problems with a foundation of <span class="font-semibold text-slate-900 custom-underline">genuine empathy, interest, and global understanding.</span>
+                        </p>
+                    </div>
+                    <div x-show="lang === 'jp'" x-transition x-cloak>
+                        <p class="text-lg text-slate-600 leading-relaxed tracking-tight font-normal">
+                            デザインへの情熱は、多文化な環境で育った幼少期にさかのぼります。日本で育ち、インターナショナルスクールで多様な文化や価値観に囲まれて過ごした経験が、私の人間理解の根幹を形作っています。この背景があるからこそ、単なる技術課題の解決に留まらず、対象への <span class="font-semibold text-slate-900 custom-underline">深い共感、好奇心、そしてグローバルな視点</span>を持ってプロダクトに向き合うことができます。
+                        </p>
+                    </div>
                 </div>
 
                 <div class="text-left">
                     <h3 class="text-2xl md:text-3xl font-bold mb-4 text-slate-900 tracking-tight" x-text="lang === 'en' ? 'Experience & Toolkit 🛠️' : 'スキルとツールキット 🛠️'"></h3>
-                    <p class="text-base md:text-lg text-slate-600 leading-relaxed tracking-tight mb-6" x-text="lang === 'en' ? 'My journey across digital marketing, sales, and product development has built a toolkit focused on technical precision. In my free time, you’ll find me on the hockey pitch or hunting for Sydney’s best matcha. 🍵' : 'デジタルマーケティング、プロダクト立案・開発からUX/UI設計まで、幅広い経験を通じて技術的な知見を深めてきました。休日は、フィールドホッケーを楽しんだり、シドニー屈指の抹茶探しに巡っています🍵'"></p>
+                    <p class="text-base md:text-lg text-slate-600 leading-relaxed tracking-tight mb-6" x-text="lang === 'en' ? 'My journey across digital marketing, sales, and product development has built a toolkit focused on technical precision. In my free time, you’ll find me on the hockey pitch or hunting for Sydney’s best matcha. 🍵' : 'デジタルマーケティング、営業、プロダクト開発と多岐にわたる経験を通じ、技術的な精密さを重視したスキルセットを磨いてきました。休日は、フィールドホッケーを楽しんだり、シドニーで一番の抹茶を探しに巡っています。🍵'"></p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;">Product Development</span>
-                        <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;">Front-end Dev</span>
-                        <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;">Product Strategy</span>
+                        <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;" x-text="lang === 'en' ? 'Product Development' : 'プロダクト開発'">Product Development</span>
+                        <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;" x-text="lang === 'en' ? 'Front-end Dev' : 'フロントエンド開発'">Front-end Dev</span>
+                        <span class="text-[10px] section-label py-1 px-3 rounded-full font-bold" style="background-color: #C1DD93; color: #5658DF;" x-text="lang === 'en' ? 'Product Strategy' : 'プロダクト戦略'">Product Strategy</span>
                     </div>
                 </div>
             </div>
 
             <div class="w-full order-1 md:order-2 rounded-3xl">
-                <img src="grad.jpg" alt="Graduation at USYD" class="w-full h-auto object-cover hover:scale-105 transition-all duration-500 cursor-pointer">
+                <img src="grad.jpg" alt="Graduation" class="w-full h-auto object-cover hover:scale-105 transition-all duration-500 cursor-pointer">
             </div>
         </div>
     </section>
@@ -231,20 +235,16 @@
     <footer class="py-12 md:py-16 px-6 border-t border-slate-200" style="background-color: #5658DF;">
         <div class="max-w-6xl mx-auto flex flex-col items-center">
             <div class="flex flex-wrap justify-center gap-6 md:gap-10 mb-8">
-                <a href="mailto:bizmesssyd@gmail.com" class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70 text-[#FFFDD0]">Contact</a>
-                <a href="Morgan_SchmidtResume.pdf" target="_blank" class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70 text-[#FFFDD0]">Resume</a>
+                <a href="mailto:bizmesssyd@gmail.com" class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70 text-[#FFFDD0]" x-text="lang === 'en' ? 'Contact' : 'お問い合わせ'">Contact</a>
+                <a href="MorganSchmidtResume.pdf" target="_blank" class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70 text-[#FFFDD0]" x-text="lang === 'en' ? 'Resume' : '履歴書'">Resume</a>
                 <a href="https://www.linkedin.com/in/morgan-c-schmidt/" target="_blank" class="text-sm font-medium tracking-wide transition-opacity hover:opacity-70 text-[#FFFDD0]">LinkedIn</a>
             </div>
-            <p class="text-[10px] tracking-[0.2em] text-center" style="color: #B2C3F9;">
+            <p class="text-[10px] tracking-[0.2em] text-center" style="color: #B2C3F9;" x-text="lang === 'en' ? 'DESIGNED & CODED BY MORGAN SCHMIDT ☺ 2026' : 'デザイン・開発：モルガン・シュミット ☺ 2026'">
                 DESIGNED & CODED BY MORGAN SCHMIDT ☺ 2026
             </p>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        lucide.createIcons();
-    </script>
 </body>
 </html>
